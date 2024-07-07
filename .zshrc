@@ -66,12 +66,7 @@ alias ls='eza -a --icons'
 alias vim='nvim'
 alias c='clear'
 alias home='cd ~'
-
-# config
-alias confn='nvim ~/.config/nvim'
-alias conff='nvim ~/.config/fisn'
-alias confa='nvim ~/.config/alacritty'
-alias confz='nvim ~/.zshrc'
+alias dot='cd ~/dotfiles'
 
 # Shell integrations
 eval "$(fzf --zsh)"

@@ -61,7 +61,8 @@ require('lazy').setup({
     --icon
     require 'lazy.icon.trouble',
 
-    -- require('lazy.fileExplore.nvimtree')
+    require('lazy.fileExplore.nvimtree'),
+    'rcarriga/nvim-notify',
 })
 
 -- [[Setting Option]]
@@ -82,7 +83,7 @@ require('setting.harpoon')
 require('setting.cmdline')
 --theme
 require("setting.theme")
--- require("setting.nvimtree")
+require("setting.nvimtree")
 -- require("setting.prettier")
 
 
