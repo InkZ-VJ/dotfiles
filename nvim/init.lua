@@ -27,7 +27,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
     -- theme setup
-    require 'lazy.theme.nightfox',
+    -- require 'lazy.theme.nightfox',
     require 'lazy.theme.rosepine',
     require 'lazy.theme.nightfly',
     require 'lazy.theme.catppucin',
@@ -59,10 +59,11 @@ require('lazy').setup({
     -- comment
     require 'lazy.comment.comment',
     --icon
-    require 'lazy.icon.trouble',
+    -- require 'lazy.icon.trouble',
 
     require('lazy.fileExplore.nvimtree'),
-    'rcarriga/nvim-notify',
+    'mbbill/undotree',
+    -- 'rcarriga/nvim-notify',
 })
 
 -- [[Setting Option]]
