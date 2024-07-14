@@ -27,19 +27,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
     -- theme setup
-    -- require 'lazy.theme.nightfox',
-    require 'lazy.theme.rosepine',
-    require 'lazy.theme.nightfly',
-    require 'lazy.theme.catppucin',
-    -- Dashboard
-    -- require 'lazy.dashboard.hyper',
+    require 'lazy.theme.theme',
     -- auto format
     require 'lazy.autoformat.format',
-    -- require 'lazy.autoformat.prettier',
     -- lsp config
     require 'lazy.lsp.mason',
     require 'lazy.lsp.null_ls',
-    -- require 'lazy.lsp.go',
+    require 'lazy.lsp.go',
     -- lua line
     require 'lazy.lualine.lualine',
     -- auto complete
@@ -48,8 +42,8 @@ require('lazy').setup({
     require 'lazy.autocomplete.pair',
     -- auto close tag
     require 'lazy.autocomplete.tag',
-    -- Fuzzy Finder
-    require 'lazy.fuzzyFinder.fzf',
+    -- Telescope
+    require 'lazy.telescope.telescope',
     -- treesitter
     require 'lazy.treesitter.treesitter',
     -- cmdline
@@ -58,12 +52,9 @@ require('lazy').setup({
     require 'lazy.harpoon.harpoon',
     -- comment
     require 'lazy.comment.comment',
-    --icon
-    -- require 'lazy.icon.trouble',
-
-    require('lazy.fileExplore.nvimtree'),
-    'mbbill/undotree',
-    -- 'rcarriga/nvim-notify',
+    require 'lazy.fileExplore.nvimtree',
+    require 'lazy.undotree.undotree',
+    require 'lazy.flash'
 })
 
 -- [[Setting Option]]
@@ -86,6 +77,6 @@ require('setting.cmdline')
 require("setting.theme")
 require("setting.nvimtree")
 -- require("setting.prettier")
-
+require("setting.go")
 
 vim.cmd [[colorscheme catppuccin-mocha]]

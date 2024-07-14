@@ -63,10 +63,15 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias ls='eza -a --icons'
+alias ll='eza -al --icons'
+alias lt='eza -a --tree --level=1 --icons'
 alias vim='nvim'
 alias c='clear'
-alias home='cd ~'
 alias dot='cd ~/dotfiles'
+alias confn='cd ~/dotfiles/nvim'
+
+# golang
+alias gmt='echo "Exec: go mod tidy" && go mod tidy'
 
 # Shell integrations
 eval "$(fzf --zsh)"
