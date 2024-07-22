@@ -28,6 +28,7 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
     -- theme setup
     require 'lazy.theme.theme',
+    require 'lazy.dashboard.hyper',
     -- auto format
     require 'lazy.autoformat.format',
     -- lsp config
@@ -78,5 +79,7 @@ require("setting.theme")
 require("setting.nvimtree")
 -- require("setting.prettier")
 require("setting.go")
+require("setting.flash")
+-- require("setting.lualine")
 
 vim.cmd [[colorscheme catppuccin-mocha]]

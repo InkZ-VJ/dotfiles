@@ -1,14 +1,3 @@
--- -- Run gofmt + goimports on save
-
-local format_sync_grp = vim.api.nvim_create_augroup("goimports", {})
-vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = "*.go",
-    callback = function()
-        require('go.format').goimports()
-    end,
-    group = format_sync_grp,
-})
-
 require('go').setup({
 
     disable_defaults = false, -- true|false when true set false to all boolean settings and replace all tables
@@ -23,9 +12,9 @@ require('go').setup({
     tag_options = 'json=omitempty', -- sets options sent to gomodifytags, i.e., json=omitempty
     gotests_template = "", -- sets gotests -template parameter (check gotests for details)
     gotests_template_dir = "", -- sets gotests -template_dir parameter (check gotests for details)
-    comment_placeholder = '', -- comment_placeholder your cool placeholder e.g. 󰟓       
+    comment_placeholder = '', -- comment_placeholder your cool placeholder e.g. 󰟓       
     icons = { breakpoint = '🧘', currentpos = '🏃' }, -- setup to `false` to disable icons setup
-    verbose = false, -- output loginf in messages
+    verbose = true, -- output loginf in messages
     lsp_cfg = true, -- true: use non-default gopls setup specified in go/lsp.lua
     -- false: do nothing
     -- if lsp_cfg is a table, merge table with with non-default gopls setup in go/lsp.lua, e.g.
@@ -38,13 +27,12 @@ require('go').setup({
     lsp_keymaps = true,  -- set to false to disable gopls/lsp keymap
     lsp_codelens = true, -- set to false to disable codelens, true by default, you can use a function
     -- function(bufnr)
-    --     vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>F", "<cmd>lua vim.lsp.buf.formatting()<CR>",
-    --         { noremap = true, silent = true })
-    -- end,
+    --    vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>F", "<cmd>lua vim.lsp.buf.formatting()<CR>", {noremap=true, silent=true})
+    -- end
     -- to setup a table of codelens
     diagnostic = { -- set diagnostic to false to disable vim.diagnostic.config setup,
         -- true: default nvim setup
-        hdlr = false, -- hook lsp diag handler and send diag to quickfix
+        hdlr = true, -- hook lsp diag handler and send diag to quickfix
         underline = true,
         virtual_text = { spacing = 2, prefix = '' }, -- virtual text setup
         signs = { '', '', '', '' }, -- set to true to use default signs, an array of 4 to specify custom signs
@@ -63,7 +51,7 @@ require('go').setup({
         style = 'inlay',
         -- Note: following setup only works for style = 'eol', you do not need to set it for 'inlay'
         -- Only show inlay hints for the current line
-        only_current_line = true,
+        only_current_line = false,
         -- Event which triggers a refersh of the inlay hints.
         -- You can make this "CursorMoved" or "CursorMoved,CursorMovedI" but
         -- not that this may cause higher CPU usage.
@@ -118,7 +106,7 @@ require('go').setup({
         -- can also set to a list of colors to define colors to choose from
         -- e.g {'#D8DEE9', '#5E81AC', '#88C0D0', '#EBCB8B', '#A3BE8C', '#B48EAD'}
     },
-    trouble = false,                                                             -- true: use trouble to open quickfix
+    trouble = true,                                                              -- true: use trouble to open quickfix
     test_efm = false,                                                            -- errorfomat for quickfix, default mix mode, set to true will be efm only
     luasnip = false,                                                             -- enable included luasnip snippets. you can also disable while add lua/snips folder to luasnip load
     --  Do not enable this if you already added the path, that will duplicate the entries
@@ -129,4 +117,23 @@ require('go').setup({
     iferr_vertical_shift = 4                                                     -- defines where the cursor will end up vertically from the begining of if err statement
 })
 
--- require('lspconfig').gopls.setup(cfg)
+-- Run gofmt + goimports on save
+
+local format_sync_grp = vim.api.nvim_create_augroup("goimports", {})
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*.go",
+    callback = function()
+        require('go.format').goimports()
+    end,
+    group = format_sync_grp,
+})
+
+-- -- Run gofmt on save
+-- local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--     pattern = "*.go",
+--     callback = function()
+--         require('go.format').gofmt()
+--     end,
+--     group = format_sync_grp,
+-- })

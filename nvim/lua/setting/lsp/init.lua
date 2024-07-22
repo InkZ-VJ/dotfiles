@@ -58,7 +58,8 @@ require('mason-lspconfig').setup()
 --  define the property 'filetypes' to the map in question.
 local servers = {
     -- clangd = {},
-    -- gopls = {},
+    gopls = { filetypes = { 'templ', 'go' } },
+    gofumpt = { filetypes = { 'templ', 'go' } },
     -- pyright = {},
     -- rust_analyzer = {},
     -- tsserver = {},
@@ -85,7 +86,16 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 local mason_lspconfig = require 'mason-lspconfig'
 
 mason_lspconfig.setup {
-    ensure_installed = vim.tbl_keys(servers),
+    ensure_installed = {
+        "gopls",
+        "gofumpt",
+        "buf",
+        "lua_ls",
+        "dockerls",
+        "docker_compose_language_service",
+        "golangci_lint_ls",
+        "marksman",
+    }
 }
 
 mason_lspconfig.setup_handlers {

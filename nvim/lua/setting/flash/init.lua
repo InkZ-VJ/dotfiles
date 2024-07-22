@@ -1,0 +1,12 @@
+-- require("flash").jump({
+--     remote_op = {
+--         restore = true,
+--         motion = true,
+--     },
+--     modes = {
+--         char = {
+--             jump_labels = true
+--         }
+--     }
+-- })
+
