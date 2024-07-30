@@ -10,8 +10,18 @@ if [ ! -d "$ZINIT_HOME" ]; then
    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
+
 eval "$(oh-my-posh init zsh --config $HOME/dotfiles/ohmyposh/zen.toml)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
@@ -66,15 +76,33 @@ alias ls='eza -a --icons'
 alias ll='eza -al --icons'
 alias lt='eza -a --tree --level=1 --icons'
 alias vim='nvim'
+alias vi='nvim'
 alias c='clear'
 alias dot='cd ~/dotfiles'
 alias confn='cd ~/dotfiles/nvim'
 
-# golang
-alias gmt='echo "Exec: go mod tidy" && go mod tidy'
+# git
+alias gst='git status'
+alias gl='git pull'
+alias gp='git push'
+alias gd='git diff | bat'
+alias gau='git add -u'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gcot='git checkout -t'
+alias gcotb='git checkout --track -b'
+alias glog='git log'
+alias glogp='git log --pretty=format:"%h %s" --graph'
 
 # Shell integrations
 eval "$(fzf --zsh)"
 # eval "$(zoxide init --cmd cd zsh)"
 
 export PATH="$PATH:$(go env GOPATH)/bin"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform

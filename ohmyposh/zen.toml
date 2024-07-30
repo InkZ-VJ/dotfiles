@@ -27,8 +27,8 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
 
     [blocks.segments.properties]
-      branch_icon = ''
-      commit_icon = '@'
+      branch_icon = '󰮠 '
+      commit_icon = ' '
       fetch_status = true
 
 [[blocks]]
@@ -58,7 +58,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
       "{{if eq .Code 0}}magenta{{end}}",
     ]
     background = 'transparent'
-    template = '󱔆'
+    template = '⋊>'
 
 [transient_prompt]
   foreground_templates = [

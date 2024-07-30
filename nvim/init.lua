@@ -55,7 +55,8 @@ require('lazy').setup({
     require 'lazy.comment.comment',
     require 'lazy.fileExplore.nvimtree',
     require 'lazy.undotree.undotree',
-    require 'lazy.flash'
+    require 'lazy.flash',
+    require 'lazy.holo.holo'
 })
 
 -- [[Setting Option]]
@@ -80,6 +81,8 @@ require("setting.nvimtree")
 -- require("setting.prettier")
 require("setting.go")
 require("setting.flash")
+require("setting.oil.oil")
+require("setting.holo")
 -- require("setting.lualine")
 
 vim.cmd [[colorscheme catppuccin-mocha]]

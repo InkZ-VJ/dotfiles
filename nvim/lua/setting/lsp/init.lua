@@ -88,8 +88,7 @@ local mason_lspconfig = require 'mason-lspconfig'
 mason_lspconfig.setup {
     ensure_installed = {
         "gopls",
-        "gofumpt",
-        "buf",
+        "bufls",
         "lua_ls",
         "dockerls",
         "docker_compose_language_service",
