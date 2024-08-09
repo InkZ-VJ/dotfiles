@@ -79,14 +79,16 @@ alias vim='nvim'
 alias vi='nvim'
 alias c='clear'
 alias dot='cd ~/dotfiles'
+alias note='cd ~/notes/Knowleage'
 alias confn='cd ~/dotfiles/nvim'
 
+alias scg='sed -n '86,101p' ~/.zshrc | bat -l bash'
 # git
 alias gst='git status'
 alias gl='git pull'
 alias gp='git push'
 alias gd='git diff | bat'
-alias gau='git add -u'
+alias ga='git add'
 alias gc='git commit -v'
 alias gca='git commit -v -a'
 alias gb='git branch'
@@ -100,9 +102,15 @@ alias glogp='git log --pretty=format:"%h %s" --graph'
 
 # Shell integrations
 eval "$(fzf --zsh)"
-# eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 export PATH="$PATH:$(go env GOPATH)/bin"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/inkz/Downloads/google-cloud-sdk/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/inkz/Downloads/google-cloud-sdk/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/inkz/Downloads/google-cloud-sdk/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/inkz/Downloads/google-cloud-sdk/google-cloud-sdk/completion.zsh.inc'; fi
