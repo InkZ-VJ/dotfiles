@@ -56,7 +56,8 @@ require('lazy').setup({
     require 'lazy.fileExplore.nvimtree',
     require 'lazy.undotree.undotree',
     require 'lazy.flash',
-    require 'lazy.template.indent'
+    require 'lazy.template.indent',
+    require 'lazy.autoformat.prettier',
 })
 
 -- [[Setting Option]]
@@ -82,5 +83,6 @@ require("setting.go")
 require("setting.flash")
 require("setting.oil.oil")
 require("setting.indent.indent")
+require("setting.prettier")
 
 vim.cmd [[colorscheme catppuccin-mocha]]
