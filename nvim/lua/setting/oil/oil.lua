@@ -20,7 +20,7 @@ require("oil").setup({
     -- Window-local options to use for oil buffers
     win_options = {
         wrap = false,
-        signcolumn = "no",
+        signcolumn = "auto:2",
         cursorcolumn = false,
         foldcolumn = "0",
         spell = false,

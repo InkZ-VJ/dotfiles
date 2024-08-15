@@ -4,6 +4,8 @@ vim.keymap.set("n", "<leader>nt", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>ee",
     "oif err != nil {<CR>}<ESC>O return err<ESC>")
 
+vim.keymap.set("n", "<leader>ne",
+    "oif err != nil {<CR>}<ESC>O return nil, err<ESC>")
 -- Comment out selected lines with //
 vim.api.nvim_set_keymap('v', '<Leader>c', [[:s/^/\/\//<CR>]], { noremap = true, silent = true })
 

@@ -56,7 +56,7 @@ require('lazy').setup({
     require 'lazy.fileExplore.nvimtree',
     require 'lazy.undotree.undotree',
     require 'lazy.flash',
-    require 'lazy.holo.holo'
+    require 'lazy.template.indent'
 })
 
 -- [[Setting Option]]
@@ -78,11 +78,9 @@ require('setting.cmdline')
 --theme
 require("setting.theme")
 require("setting.nvimtree")
--- require("setting.prettier")
 require("setting.go")
 require("setting.flash")
 require("setting.oil.oil")
-require("setting.holo")
--- require("setting.lualine")
+require("setting.indent.indent")
 
 vim.cmd [[colorscheme catppuccin-mocha]]

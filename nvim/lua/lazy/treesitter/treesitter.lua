@@ -3,7 +3,8 @@ local treesitter = { -- Highlight, edit, and navigate code
     dependencies = {
         'nvim-treesitter/nvim-treesitter-textobjects',
         'theHamsta/nvim-treesitter-pairs',
-        'https://gitlab.com/HiPhish/rainbow-delimiters.nvim'
+        'https://gitlab.com/HiPhish/rainbow-delimiters.nvim',
+        'nvim-treesitter/nvim-treesitter-context',
     },
     build = ':TSUpdate',
     opts = {

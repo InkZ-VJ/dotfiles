@@ -1,5 +1,4 @@
 require('go').setup({
-
     disable_defaults = false, -- true|false when true set false to all boolean settings and replace all tables
     -- settings with {}; string will be set to ''. user need to setup ALL the settings
     -- It is import to set ALL values in your own config if set value to true otherwise the plugin may not work
@@ -12,7 +11,7 @@ require('go').setup({
     tag_options = 'json=omitempty', -- sets options sent to gomodifytags, i.e., json=omitempty
     gotests_template = "", -- sets gotests -template parameter (check gotests for details)
     gotests_template_dir = "", -- sets gotests -template_dir parameter (check gotests for details)
-    comment_placeholder = '', -- comment_placeholder your cool placeholder e.g. 󰟓       
+    comment_placeholder = '󰟓 ', -- comment_placeholder your cool placeholder e.g. 󰟓       
     icons = { breakpoint = '🧘', currentpos = '🏃' }, -- setup to `false` to disable icons setup
     verbose = true, -- output loginf in messages
     lsp_cfg = true, -- true: use non-default gopls setup specified in go/lsp.lua
@@ -45,10 +44,10 @@ require('go').setup({
     -- set to true: use gopls to format
     -- false if you want to use other formatter tool(e.g. efm, nulls)
     lsp_inlay_hints = {
-        enable = false,
+        enable = true,
         -- hint style, set to 'eol' for end-of-line hints, 'inlay' for inline hints
         -- inlay only available for 0.10.x
-        style = 'inlay',
+        style = 'eol',
         -- Note: following setup only works for style = 'eol', you do not need to set it for 'inlay'
         -- Only show inlay hints for the current line
         only_current_line = false,
