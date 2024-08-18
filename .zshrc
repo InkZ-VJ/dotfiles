@@ -129,9 +129,3 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/inkz/Downloads/google-cloud-sdk/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/inkz/Downloads/google-cloud-sdk/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/inkz/Downloads/google-cloud-sdk/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/inkz/Downloads/google-cloud-sdk/google-cloud-sdk/completion.zsh.inc'; fi
