@@ -80,7 +80,7 @@ alias vi='nvim'
 alias c='clear'
 alias dot='cd ~/dotfiles'
 alias note='cd ~/notes/Knowleage'
-alias confn='cd ~/dotfiles/nvim'
+alias confn='cd ~/dotfiles/.config/nvim'
 
 # git
 alias gst='git status'

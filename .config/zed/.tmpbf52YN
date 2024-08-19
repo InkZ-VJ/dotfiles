@@ -1,0 +1,29 @@
+{"signed_in":false,"milliseconds_since_first_event":0,"type":"App","operation":"open"}
+{"signed_in":false,"milliseconds_since_first_event":20,"type":"Setting","setting":"theme","value":"One Dark"}
+{"signed_in":false,"milliseconds_since_first_event":20,"type":"Setting","setting":"keymap","value":"VSCode"}
+{"signed_in":false,"milliseconds_since_first_event":0,"type":"Extension","extension_id":"catppuccin","version":"0.2.8"}
+{"signed_in":false,"milliseconds_since_first_event":0,"type":"Extension","extension_id":"dockerfile","version":"0.0.4"}
+{"signed_in":false,"milliseconds_since_first_event":0,"type":"Extension","extension_id":"html","version":"0.1.1"}
+{"signed_in":false,"milliseconds_since_first_event":0,"type":"Extension","extension_id":"make","version":"1.0.1"}
+{"signed_in":false,"milliseconds_since_first_event":0,"type":"Extension","extension_id":"night-owlz","version":"0.0.3"}
+{"signed_in":false,"milliseconds_since_first_event":0,"type":"Extension","extension_id":"toml","version":"0.1.1"}
+{"signed_in":false,"milliseconds_since_first_event":849,"type":"Editor","operation":"open","file_extension":"proto","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":false,"milliseconds_since_first_event":849,"type":"Editor","operation":"open","file_extension":"go","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":false,"milliseconds_since_first_event":849,"type":"Editor","operation":"open","file_extension":"go","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":false,"milliseconds_since_first_event":849,"type":"Editor","operation":"open","file_extension":"md","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":false,"milliseconds_since_first_event":849,"type":"Editor","operation":"open","file_extension":"go","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":false,"milliseconds_since_first_event":849,"type":"Editor","operation":"open","file_extension":"go","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":10457,"type":"App","operation":"open project"}
+{"signed_in":true,"milliseconds_since_first_event":31474,"type":"Editor","operation":"open","file_extension":null,"vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":32737,"type":"Editor","operation":"open","file_extension":"go","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":103647,"type":"Editor","operation":"open","file_extension":null,"vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":103647,"type":"App","operation":"project diagnostics: open"}
+{"signed_in":true,"milliseconds_since_first_event":110966,"type":"Editor","operation":"open","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":123589,"type":"Setting","setting":"theme","value":"Catppuccin Mocha"}
+{"signed_in":true,"milliseconds_since_first_event":133482,"type":"Setting","setting":"theme","value":"Rosé Pine"}
+{"signed_in":true,"milliseconds_since_first_event":148694,"type":"Setting","setting":"theme","value":"Rosé Pine Dawn"}
+{"signed_in":true,"milliseconds_since_first_event":154693,"type":"Setting","setting":"theme","value":"Night Owl Light"}
+{"signed_in":true,"milliseconds_since_first_event":163654,"type":"Setting","setting":"theme","value":"Night Owl Dark"}
+{"signed_in":true,"milliseconds_since_first_event":185468,"type":"App","operation":"extensions page: open"}
+{"signed_in":true,"milliseconds_since_first_event":239963,"type":"Memory","memory_in_bytes":168329216,"virtual_memory_in_bytes":468825702400}
+{"signed_in":true,"milliseconds_since_first_event":239963,"type":"Cpu","usage_as_percentage":0.0,"core_count":8}

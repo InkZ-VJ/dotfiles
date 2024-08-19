@@ -18,6 +18,12 @@ vim.wo.number = true
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
+
+vim.opt.list = true
+-- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number"
+
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
@@ -87,4 +93,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.keymap.set('n', '<leader><F5>', vim.cmd.UndotreeToggle)
-

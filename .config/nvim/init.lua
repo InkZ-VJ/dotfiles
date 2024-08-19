@@ -58,6 +58,7 @@ require('lazy').setup({
     require 'lazy.flash',
     -- require 'lazy.template.indent',
     require 'lazy.autoformat.prettier',
+    require 'lazy.git',
 })
 
 -- [[Setting Option]]
