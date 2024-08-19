@@ -4,7 +4,11 @@
 
 ```bash
 git clone https://github.com/InkZ-VJ/dotfiles ~/dotfiles 
-cd ~/dotfiles
-chmod +x link.sh
-./link.sh
 ```
+
+stow dotfiles management
+```bash
+cd dotfiles
+stow .
+```
+

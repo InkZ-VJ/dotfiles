@@ -11,7 +11,7 @@ if [ ! -d "$ZINIT_HOME" ]; then
 fi
 
 
-eval "$(oh-my-posh init zsh --config $HOME/dotfiles/ohmyposh/zen.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/dotfiles/.config/ohmyposh/zen.toml)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 function yy() {
