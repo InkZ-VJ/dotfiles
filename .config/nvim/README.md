@@ -3,30 +3,12 @@ Nvim Config inspired by [Kickstart neovim](https://github.com/nvim-lua/kickstart
 * New neovim users
 * Colemak users
 
->**INSTALLATION**
+>**Checkhealth**
 
-removed old config
-```bash
-rm -rf nvim
-rm -rf ~/.local/share/nvim
-```
+run command checkhealth to see each package may require some dependency like `rust cargo fzf fd npm node`
 
-installed 
-```bash
-git clone https://github.com/VatJittiprasert/InkZ_nvim.git ~/.config/nvim
-```
 
->**List of Plugins**
-
-* quality of life : [Auto-pair](), [Lua-line](https://github.com/nvim-lualine/lualine.nvim)
-* theme : [NightFox(default)](https://github.com/EdenEast/nightfox.nvim), [Rosepine(main)](https://github.com/rose-pine/neovim)
-* Colorized : [Treesitter]()
-* Dashboard : [Hyper]()
-* Files Expore : [Fuzzy Finder](), [Harpoon]()
-* auto-complete : [Nvim-cmp](), [Null-ls]()
-* LSP : [Mason]()
-* Formatter : [Prettier]()
-
+---
 >**CHANGE THEME**
 
 you can change theme by 
@@ -34,6 +16,7 @@ you can change theme by
 1. add file in `lazy/theme/${themeName}.lua` then add installation to file. You can see example in others theme that I already installed
 2. change theme by change lazy section in `init.lua` from `'lazy.theme.nightfox'` to `lazy.theme.${themeName}`
 
+---
 >**COLEMAK REMAP**
 
 |colemak| querty | desription|
@@ -57,13 +40,52 @@ you can change theme by
  * `vi{` to `vl{` : switch to visual mode and select all in `{ }` 
  * ...
 
+>**Basic Keymap**
 
->**Basic Shostcut command**
+**diagnosis**
+|Key|Description|
+|----|----|
+|`[`d|move to previous diagnosis|
+|`]`d|move to next diagnosis|
+|`␣`e|Make diagnosis float|
+
+**peek**
+you can use with go to defenition ␣dd in fzf defenition
+|Key|Description|
+|----|----|
+|`K`|peek variable or function defenetion|
+|`KK`|peek variable or function defenetion and move in description|
+|`q`|quit from peeking|
+
+**format**
+|Key|Description|
+|----|----|
+|`␣`fp|format file with prettierd|
+
+---
+>** File Explore **
 
 |Key|Description|
 |----|----|
 |`␣`pv|Explore file|
+|`␣`nt|Open Nvim tree|
+|`␣`ft|Move cursor to Nvim tree|
+|`-`|Open Oil Nvim|
 
+---
+>**Harpoon**
+
+This keymap are suit with my personal layout(Colemak). you can change keymap to hjkl for qwerty
+|Key|Definition|
+|----|----|
+|`␣`a|Pin current file to Harpoon|
+|`Ctrl`+`o`|Open Harpoon Dashboard|
+|`Ctrl`+`h`|Move to index 0 in Harpoon Dashboard|
+|`Ctrl`+`n`|Move to index 1 in Harpoon Dashboard|
+|`Ctrl`+`e`|Move to index 2 in Harpoon Dashboard|
+|`Ctrl`+`i`|Move to index 3 in Harpoon Dashboard|
+
+---
 >**FUZZY FINDER**
 
 `␣` : Spacebar symbols
@@ -79,28 +101,24 @@ you can change theme by
 |`␣`sG|[S]earch by [G]rep on Git Root|
 |`␣`sd|[S]earch [D]iagnostics|
 |`␣`sr|[S]earch [R]esume|
-|`␣`dd|[D]efinitions|
+|`␣`dd|[D]efinitions same as `gd` go to defenision|
 |`␣`pp|[P]revious file|
 |`␣`ff|[F]ormat with Prittier|
 
->**Harpoon**
-
-This keymap are suit with my personal layout(Colemak). you can change keymap to hjkl for qwerty
-|Key|Definition|
-|----|----|
-|`␣`a|Pin current file to Harpoon|
-|`Ctrl`+`o`|Open Harpoon Dashboard|
-|`Ctrl`+`h`|Move to index 0 in Harpoon Dashboard|
-|`Ctrl`+`n`|Move to index 1 in Harpoon Dashboard|
-|`Ctrl`+`e`|Move to index 2 in Harpoon Dashboard|
-|`Ctrl`+`i`|Move to index 3 in Harpoon Dashboard|
-
+---
 >**Golang Ultimate Key**
 
 `␣`ee : auto type err handling
 ```go
 if err != nil {
     return err
+}
+```
+
+`␣`ne : auto type err handling
+```go
+if err != nil {
+    return nil, err
 }
 ```
 

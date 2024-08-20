@@ -99,6 +99,9 @@ alias gcotb='git checkout --track -b'
 alias glog='git log'
 alias glogp='git log --pretty=format:"%h %s" --graph'
 
+# useful command
+alias cover='firefox $(pwd)/cover.html'
+
 # Shell integrations
 eval "$(fzf --zsh)"
 
