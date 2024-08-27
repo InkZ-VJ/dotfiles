@@ -14,13 +14,14 @@ require('telescope').setup {
             '--with-filename',
             '--line-number',
             '--column',
-            '--smart-case',
-            '-uu' -- **This is the added flag**
+            '--smart-case'
         },
     },
     pickers = {
         find_files = {
-            -- hidden = true
+            hidden = true,
+            no_ignore = true, -- Don't ignore files listed in .gitignore
+            follow = true,    -- Follow symbolic links
         },
     },
 }

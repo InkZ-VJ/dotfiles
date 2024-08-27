@@ -101,6 +101,8 @@ alias glogp='git log --pretty=format:"%h %s" --graph'
 
 # useful command
 alias cover='firefox $(pwd)/cover.html'
+alias go-test='go test -cover ./... -coverprofile=cover.out -covermode count && go tool cover -html cover.out -o cover.html'
+alias dev='nodemon --exec go run --tags dynamic $(shell pwd)/cmd/main.go --signal SIGTERM'
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -133,7 +135,7 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/inkz/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/inkz/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/inkz/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/inkz/google-cloud-sdk/completion.zsh.inc'; fi
