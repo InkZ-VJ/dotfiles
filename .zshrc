@@ -44,6 +44,9 @@ zinit snippet OMZP::command-not-found
 # Load completions
 autoload -Uz compinit && compinit
 
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+zstyle ':completion:*:*:git:*' use-cache 1
+
 zinit cdreplay -q
 
 # Keybindings
