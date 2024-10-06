@@ -38,11 +38,10 @@ require('lazy').setup({
     -- lua line
     require 'lazy.lualine.lualine',
     -- auto complete
-    require 'lazy.autocomplete.cmp',
-    -- auto pair
-    require 'lazy.autocomplete.pair',
-    -- auto close tag
-    require 'lazy.autocomplete.tag',
+    require 'lazy.autocomplete.completion',
+    -- require 'lazy.autocomplete.cmp',
+    -- require 'lazy.autocomplete.pair',
+    -- require 'lazy.autocomplete.tag',
     -- Telescope
     require 'lazy.telescope.telescope',
     -- treesitter

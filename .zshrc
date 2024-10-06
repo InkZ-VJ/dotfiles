@@ -142,3 +142,4 @@ if [ -f '/Users/inkz/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/inkz/googl
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/inkz/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/inkz/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
