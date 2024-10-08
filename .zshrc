@@ -1,6 +1,10 @@
 # Ensure Homebrew's binary path is included in PATH
 export PATH="/opt/homebrew/bin:$PATH"
 
+if [ -f ~/.zshrc_secret ]; then
+    source ~/.zshrc_secret
+fi
+
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -135,11 +139,3 @@ eval "$(zoxide init --cmd cd zsh)"
 export PATH="$PATH:$(go env GOPATH)/bin"
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/inkz/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/inkz/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/inkz/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/inkz/google-cloud-sdk/completion.zsh.inc'; fi
-export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
