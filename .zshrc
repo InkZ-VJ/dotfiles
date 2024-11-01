@@ -108,7 +108,7 @@ alias glogp='git log --pretty=format:"%h %s" --graph'
 
 # useful command
 alias cover='firefox $(pwd)/cover.html'
-alias go-test='go test -cover ./... -coverprofile=cover.out -covermode count && go tool cover -html cover.out -o cover.html'
+
 alias dev='nodemon --exec go run --tags dynamic $(shell pwd)/cmd/main.go --signal SIGTERM'
 
 # Shell integrations
@@ -133,6 +133,12 @@ _fzf_compgen_dir() {
 }
 
 source ~/fzf-git.sh/fzf-git.sh
+
+for script in ~/scripts/*.sh; do
+    if [ -f "$script" ]; then
+        source "$script"
+    fi
+done
 
 eval "$(zoxide init --cmd cd zsh)"
 

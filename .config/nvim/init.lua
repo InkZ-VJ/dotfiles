@@ -81,7 +81,7 @@ require("setting.theme")
 require("setting.nvimtree")
 require("setting.go")
 require("setting.flash")
-require("setting.oil.oil")
+require("setting.oil")
 -- require("setting.indent.indent")
 require("setting.prettier")
 
