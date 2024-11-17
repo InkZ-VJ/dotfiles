@@ -17,15 +17,22 @@ function govul {
 }
 
 function gff {
-    echo "Running: grepgin fmt.Print"
+    echo "Running: grep find fmt.Print"
     grep -r "fmt\.P" *
+    grep -r "log\.P" *
+}
+
+function gfe {
+    echo "Running: grep find errors.New"
+    grep -r "errors\.New" *
 }
 
 function gpp {
     got && echo "\n" && 
         gol && echo "\n" && 
         govul && echo "\n" && 
-        gff
+        gff && echo "\n" && 
+        gfe
 }
 
 function gmk {

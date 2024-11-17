@@ -12,3 +12,8 @@ cd dotfiles
 stow .
 ```
 
+
+setup gitignore global
+```bash
+git config --global core.excludesfile ~/.gitignore_global
+```

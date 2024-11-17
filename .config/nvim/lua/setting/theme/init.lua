@@ -1,19 +1,19 @@
 require("rose-pine").setup({
-    variant = "moon",      -- auto, main, moon, or dawn
+    variant = "main",      -- auto, main, moon, or dawn
     dark_variant = "main", -- main, moon, or dawn
     dim_inactive_windows = false,
     extend_background_behind_borders = true,
 
     enable = {
-        terminal = false,
+        terminal = true,
         legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
         migrations = true,        -- Handle deprecated options automatically
     },
 
     styles = {
-        bold = false,
-        italic = false,
-        transparency = true,
+        bold = true,
+        italic = true,
+        transparency = false,
     },
 
     groups = {
@@ -73,7 +73,7 @@ require("catppuccin").setup({
         dark = "mocha",
     },
     transparent_background = true, -- disables setting the background color.
-    show_end_of_buffer = false,    -- shows the '~' characters after the end of buffers
+    show_end_of_buffer = true,     -- shows the '~' characters after the end of buffers
     term_colors = true,            -- sets terminal colors (e.g. `g:terminal_color_0`)
     dim_inactive = {
         enabled = false,           -- dims the background color of inactive window
@@ -107,9 +107,20 @@ require("catppuccin").setup({
         nvimtree = true,
         treesitter = true,
         notify = false,
+        harpoon = true,
+        flash = true,
+        telescope = {
+            enabled = true,
+            -- style = "nvchad"
+        },
         mini = {
             enabled = true,
             indentscope_color = "",
+        },
+        indent_blankline = {
+            enabled = true,
+            scope_color = "", -- catppuccin color (eg. `lavender`) Default: text
+            colored_indent_levels = false,
         },
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },

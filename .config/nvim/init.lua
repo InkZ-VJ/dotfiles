@@ -54,10 +54,12 @@ require('lazy').setup({
     require 'lazy.comment.comment',
     require 'lazy.fileExplore.nvimtree',
     require 'lazy.undotree.undotree',
-    require 'lazy.flash',
+    require 'lazy.fileNavigator',
     -- require 'lazy.template.indent',
     require 'lazy.autoformat.prettier',
     require 'lazy.git',
+
+    -- "github/copilot.vim",
 })
 
 -- [[Setting Option]]
@@ -84,5 +86,6 @@ require("setting.flash")
 require("setting.oil")
 -- require("setting.indent.indent")
 require("setting.prettier")
+require("setting.aerial")
 
-vim.cmd [[colorscheme catppuccin-mocha]]
+vim.cmd [[colorscheme rose-pine]]
