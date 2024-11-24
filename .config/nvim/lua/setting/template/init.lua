@@ -5,6 +5,9 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 13
 
+vim.opt.spell = true
+vim.opt.spelllang = 'en_us'
+
 vim.g.netrw_liststyle = 0
 
 vim.filetype.add({ extension = { templ = "templ" } })

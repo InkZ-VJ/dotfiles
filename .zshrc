@@ -110,6 +110,7 @@ alias glogp='git log --pretty=format:"%h %s" --graph'
 alias cover='firefox $(pwd)/cover.html'
 alias air='air -c ~/.air.toml'
 alias dev='nodemon --exec go run --tags dynamic $(shell pwd)/cmd/main.go --signal SIGTERM'
+alias csp='codespell .'
 
 # Shell integrations
 eval "$(fzf --zsh)"

@@ -3,8 +3,8 @@ require('go').setup({
     -- settings with {}; string will be set to ''. user need to setup ALL the settings
     -- It is import to set ALL values in your own config if set value to true otherwise the plugin may not work
     go = 'go', -- go command, can be go[default] or e.g. go1.18beta1
-    goimports = 'goimports', -- goimports command, can be gopls[default] or either goimports or golines if need to split long lines
-    gofmt = 'gofumpt', -- gofmt through gopls: alternative is gofumpt, goimports, golines, gofmt, etc
+    goimports = 'gopls', -- goimports command, can be gopls[default] or either goimports or golines if need to split long lines
+    gofmt = 'gopls', -- gofmt through gopls: alternative is gofumpt, goimports, golines, gofmt, etc
     fillstruct = 'gopls', -- set to fillstruct if gopls fails to fill struct
     max_line_len = 0, -- max line length in golines format, Target maximum line length for golines
     tag_transform = false, -- can be transform option("snakecase", "camelcase", etc) check gomodifytags for details and more options
@@ -18,7 +18,7 @@ require('go').setup({
     -- false: do nothing
     -- if lsp_cfg is a table, merge table with with non-default gopls setup in go/lsp.lua, e.g.
     --   lsp_cfg = {settings={gopls={matcher='CaseInsensitive', ['local'] = 'your_local_module_path', gofumpt = true }}}
-    lsp_gofumpt = true,  -- true: set default gofmt in gopls format to gofumpt
+    lsp_gofumpt = false, -- true: set default gofmt in gopls format to gofumpt
     -- false: do not set default gofmt in gopls format to gofumpt
     lsp_on_attach = nil, -- nil: use on_attach function defined in go/lsp.lua,
     --      when lsp_cfg is true

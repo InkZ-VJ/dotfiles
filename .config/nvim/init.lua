@@ -59,7 +59,7 @@ require('lazy').setup({
     require 'lazy.autoformat.prettier',
     require 'lazy.git',
 
-    -- "github/copilot.vim",
+    require 'lazy.copilot.copilot',
 })
 
 -- [[Setting Option]]
@@ -88,4 +88,4 @@ require("setting.oil")
 require("setting.prettier")
 require("setting.aerial")
 
-vim.cmd [[colorscheme rose-pine]]
+vim.cmd [[colorscheme catppuccin]]
