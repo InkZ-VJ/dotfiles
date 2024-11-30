@@ -16,6 +16,10 @@ require('telescope').setup {
             '--column',
             '--smart-case'
         },
+        file_ignore_patterns = {
+            "%.git/", -- Ignore .git directory
+            "tmp/",   -- Ignore tmp directory
+        },
     },
     pickers = {
         find_files = {

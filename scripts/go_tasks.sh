@@ -27,13 +27,20 @@ function gfe {
     grep -r "errors\.New" *
 }
 
+function csp {
+    echo "Running: codespell ."
+    codespell .
+}
+
 function gpp {
     got && echo "\n" && 
         gol && echo "\n" && 
         govul && echo "\n" && 
         gff && echo "\n" && 
-        gfe
+        gfe && echo "\n" && 
+        csp
 }
+
 
 function gmk {
     mockery --dir ./internal/core/ports --output ./internal/core/ports/mocks/ --all
