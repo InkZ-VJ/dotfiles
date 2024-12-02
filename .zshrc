@@ -1,5 +1,6 @@
 # Ensure Homebrew's binary path is included in PATH
 export PATH="/opt/homebrew/bin:$PATH"
+export GIT_EDITOR=nvim
 
 if [ -f ~/.zshrc_secret ]; then
     source ~/.zshrc_secret
@@ -17,15 +18,6 @@ fi
 
 eval "$(oh-my-posh init zsh --config $HOME/dotfiles/.config/ohmyposh/zen.toml)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-function yy() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
 
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
