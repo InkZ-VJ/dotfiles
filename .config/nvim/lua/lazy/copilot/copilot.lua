@@ -1,20 +1,21 @@
 local copilot = {
+    -- {
+    --     "github/copilot.vim",
+    --
+    -- },
     {
-        "github/copilot.vim",
-
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+        config = function()
+            require("copilot").setup({})
+        end,
     },
     {
-        "CopilotC-Nvim/CopilotChat.nvim",
-        branch = "canary",
-        dependencies = {
-            { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
-            { "nvim-lua/plenary.nvim" },  -- for curl, log wrapper
-        },
-        build = "make tiktoken",          -- Only on MacOS or Linux
-        opts = {
-            -- See Configuration section for options
-        },
-        -- See Commands section for default commands if you want to lazy load on them
+        "zbirenbaum/copilot-cmp",
+        config = function()
+            require("copilot_cmp").setup()
+        end
     },
 }
 

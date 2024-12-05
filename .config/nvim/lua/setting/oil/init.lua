@@ -1,6 +1,11 @@
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<leader>-", "<cmd>lua require('oil').open_float('.')<CR>", { noremap = true, silent = true })
 
-require("oil").setup({
+
+local oil = require("oil")
+-- oil.open_float(".")
+
+oil.setup({
     -- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
     -- Set to false if you want some other plugin (e.g. netrw) to open when you edit directories.
     default_file_explorer = false,
@@ -20,7 +25,7 @@ require("oil").setup({
     -- Window-local options to use for oil buffers
     win_options = {
         wrap = false,
-        signcolumn = "yes:2",
+        signcolumn = "auto:3",
         cursorcolumn = false,
         foldcolumn = "0",
         spell = false,
@@ -126,7 +131,7 @@ require("oil").setup({
             winblend = 0,
         },
         -- preview_split: Split direction: "auto", "left", "right", "above", "below".
-        preview_split = "auto",
+        preview_split = "right",
         -- This is the config that will be passed to nvim_open_win.
         -- Change values here to customize the layout
         override = function(conf)

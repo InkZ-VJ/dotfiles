@@ -30,7 +30,7 @@ prettier.setup({
         print_width = 80,
         prose_wrap = "preserve",
         quote_props = "as-needed",
-        semi = true,
+        semi = false,
         single_attribute_per_line = false,
         single_quote = false,
         tab_width = 4,
