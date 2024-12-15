@@ -40,7 +40,7 @@ return {
                 local bufnr = args.buf
 
                 -- Only attach to clients that support document formatting
-                if not client.server_capabilities.documentFormattingProvider then
+                    if not client.server_capabilities.documentFormattingProvider then
                     return
                 end
 

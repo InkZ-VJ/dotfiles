@@ -120,7 +120,6 @@ vim.keymap.set('n', '<leader>gm', vim.cmd.GoImports)
 vim.keymap.set('n', '<leader>gmt', vim.cmd.GoModTidy)
 
 -- Run gofmt + goimports on save
-
 local format_sync_grp = vim.api.nvim_create_augroup("goimports", {})
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*.go",
@@ -129,13 +128,3 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     end,
     group = format_sync_grp,
 })
-
--- -- Run gofmt on save
--- local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
--- vim.api.nvim_create_autocmd("BufWritePre", {
---     pattern = "*.go",
---     callback = function()
---         require('go.format').gofmt()
---     end,
---     group = format_sync_grp,
--- })

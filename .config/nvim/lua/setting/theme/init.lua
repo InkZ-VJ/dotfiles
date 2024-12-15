@@ -38,41 +38,23 @@ require("catppuccin").setup({
         gitsigns = true,
         nvimtree = true,
         treesitter = true,
-        notify = false,
+        notify = true,
         harpoon = true,
         flash = true,
+        mason = true,
+        copilot_vim = true,
+        noice = true,
+        aerial = true,
         telescope = {
             enabled = true,
-            -- style = "nvchad"
+            style = "nvchad"
         },
         mini = {
             enabled = true,
-            indentscope_color = "",
-        },
-        indent_blankline = {
-            enabled = true,
-            scope_color = "", -- catppuccin color (eg. `lavender`) Default: text
-            colored_indent_levels = false,
+            indentscope_color = "peach",
         },
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },
-})
-
-require("tokyonight").setup({
-    -- use the night style
-    style = "night",
-    -- disable italic for functions
-    transparent = true,     -- Enable this to disable setting the background color
-    terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
-    styles = {
-        transparency = true,
-        functions = {}
-    },
-    -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-    on_colors = function(colors)
-        colors.hint = colors.orange
-        colors.error = "#ff0000"
-    end
 })
 
 require("rose-pine").setup({

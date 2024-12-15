@@ -12,9 +12,7 @@ local cmp = {
 
             -- Adds a number of user-friendly snippets
             'rafamadriz/friendly-snippets',
-            
             'onsails/lspkind.nvim',
-            
         },
     },
     {
@@ -29,9 +27,6 @@ local cmp = {
             }
         end
     },
-    -- {
-    --     'github/copilot.vim'
-    -- }
 }
 
 return cmp

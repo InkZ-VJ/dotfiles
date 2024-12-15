@@ -29,33 +29,33 @@ lspkind.init({
     -- override preset symbols
     --
     -- default: {}
-    symbol_map = {
-        Text = "󰉿(text)",
-        Method = "󰆧(method)",
-        Function = "󰊕(func)",
-        Constructor = "(constructor)",
-        Field = "󰜢(field)",
-        Variable = "󰀫(variable)",
-        Class = "󰠱(class)",
-        Interface = "(interface)",
-        Module = "(module)",
-        Property = "󰜢(property)",
-        Unit = "󰑭(unit)",
-        Value = "󰎠(value)",
-        Enum = "(Enum)",
-        Keyword = "󰌋(keyword)",
-        Snippet = "(snippet)",
-        Color = "󰏘(color)",
-        File = "󰈙(file)",
-        Reference = "󰈇(ref)",
-        Folder = "󰉋(folder)",
-        EnumMember = "(enumMember)",
-        Constant = "󰏿(constant)",
-        Struct = "󰙅(struct)",
-        Event = "(event)",
-        Operator = "󰆕(operator)",
-        TypeParameter = "",
-    },
+    -- symbol_map = {
+    --     Text = "󰉿(text)",
+    --     Method = "󰆧(method)",
+    --     Function = "󰊕(func)",
+    --     Constructor = "(constructor)",
+    --     Field = "󰜢(field)",
+    --     Variable = "󰀫(variable)",
+    --     Class = "󰠱(class)",
+    --     Interface = "(interface)",
+    --     Module = "(module)",
+    --     Property = "󰜢(property)",
+    --     Unit = "󰑭(unit)",
+    --     Value = "󰎠(value)",
+    --     Enum = "(Enum)",
+    --     Keyword = "󰌋(keyword)",
+    --     Snippet = "(snippet)",
+    --     Color = "󰏘(color)",
+    --     File = "󰈙(file)",
+    --     Reference = "󰈇(ref)",
+    --     Folder = "󰉋(folder)",
+    --     EnumMember = "(enumMember)",
+    --     Constant = "󰏿(constant)",
+    --     Struct = "󰙅(struct)",
+    --     Event = "(event)",
+    --     Operator = "󰆕(operator)",
+    --     TypeParameter = "",
+    -- },
 })
 
 cmp.setup {
@@ -98,9 +98,9 @@ cmp.setup {
         end, { 'i', 's' }),
     },
     sources = {
-        -- Copilot Source
-        { name = "copilot",  group_index = 2 },
-        -- Other Sources
+        --     -- Copilot Source
+        --     -- { name = "copilot",  group_index = 2 },
+        --     -- Other Sources
         { name = "nvim_lsp", group_index = 2 },
         { name = "path",     group_index = 2 },
         { name = "luasnip",  group_index = 2 },
@@ -111,7 +111,7 @@ cmp.setup {
             mode = "symbol",
             max_width = 50,
             symbol_map = {
-                Copilot = "(copilot)",
+                -- Copilot = "(copilot)",
                 Text = "󰉿(text)",
                 Method = "󰆧(method)",
                 Function = "󰊕(func)",

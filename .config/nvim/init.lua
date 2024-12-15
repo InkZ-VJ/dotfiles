@@ -22,7 +22,6 @@ if not vim.loop.fs_stat(lazypath) then
     }
 end
 
-
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
@@ -31,12 +30,13 @@ require('lazy').setup({
     require 'lazy.dashboard.hyper',
     -- auto format
     require 'lazy.autoformat.format',
+    require 'lazy.autoformat.prettier',
     -- lsp config
     require 'lazy.lsp.mason',
     require 'lazy.lsp.null_ls',
     require 'lazy.lsp.go',
-    -- lua line
-    require 'lazy.lualine.lualine',
+    -- status line
+    require 'lazy.statusbar',
     -- auto complete
     require 'lazy.autocomplete.completion',
     -- Telescope
@@ -53,35 +53,24 @@ require('lazy').setup({
     require 'lazy.undotree.undotree',
     require 'lazy.fileNavigator',
     -- require 'lazy.template.indent',
-    require 'lazy.autoformat.prettier',
     require 'lazy.git',
-
     require 'lazy.copilot.copilot',
 })
 
 -- [[Setting Option]]
 
--- diagnostic
 require('setting.diagnostic')
--- Telescope setup
 require('setting.telescope')
--- Treesitter
 require('setting.treesitter')
--- LSP
 require('setting.lsp')
--- cmp
 require('setting.cmp')
--- harpoon2
 require('setting.harpoon')
---cmdline
 require('setting.cmdline')
---theme
 require("setting.theme")
 require("setting.nvimtree")
 require("setting.go")
 require("setting.flash")
 require("setting.oil")
--- require("setting.indent.indent")
 require("setting.prettier")
 require("setting.aerial")
 
