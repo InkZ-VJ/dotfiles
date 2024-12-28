@@ -13,7 +13,7 @@ alias ff='fastfetch'
 
 alias vim='nvim'
 alias vi='nvim'
-alias c='clear && fastfetch'
+alias c='clear'
 alias dot='cd ~/dotfiles'
 alias note='cd ~/notes/Knowleage'
 alias confn='cd ~/dotfiles/.config/nvim'

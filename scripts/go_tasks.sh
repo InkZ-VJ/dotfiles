@@ -11,11 +11,6 @@ function gol {
     golangci-lint run
 }
 
-function govul {
-    echo "Running: govulncheck"
-    govulncheck ./...
-}
-
 function gff {
     echo "Running: grep find fmt.Print"
     grep -r "fmt\.P" *
@@ -35,7 +30,6 @@ function csp {
 function gpp {
     got && echo "\n" && 
         gol && echo "\n" && 
-        govul && echo "\n" && 
         gff && echo "\n" && 
         gfe && echo "\n" && 
         csp
@@ -45,5 +39,3 @@ function gpp {
 function gmk {
     mockery --dir ./internal/core/ports --output ./internal/core/ports/mocks/ --all
 }
-
-
