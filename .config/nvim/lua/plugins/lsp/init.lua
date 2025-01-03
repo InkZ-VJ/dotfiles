@@ -9,7 +9,7 @@ local lsp = {
             "theHamsta/nvim-dap-virtual-text",
         },
         config = function()
-            require("setting.go")
+            require("plugins.lsp.config.go")
         end,
         event = { "CmdlineEnter" },
         ft = { "go", 'gomod' },

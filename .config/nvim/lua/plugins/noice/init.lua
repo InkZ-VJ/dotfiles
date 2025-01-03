@@ -14,7 +14,7 @@ local cmd = {
             "rcarriga/nvim-notify",
         },
         config = function()
-            require('setting.noice')
+            require('plugins.noice.config')
         end
     }
 }

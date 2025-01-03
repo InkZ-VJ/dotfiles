@@ -4,16 +4,14 @@ local theme = {
         name = "catppuccin",
         priority = 1000,
         config = function()
-            vim.cmd.colorscheme 'catppuccin'
-            require("setting.theme.catppuccin")
+            require("plugins.theme.config.catppuccin")
         end
     },
     {
         'rose-pine/neovim',
         priority = 999,
         config = function()
-            vim.cmd.colorscheme 'catppuccin'
-            require("setting.theme.rose-pine")
+            require("plugins.theme.config.rose-pine")
         end
     },
 }

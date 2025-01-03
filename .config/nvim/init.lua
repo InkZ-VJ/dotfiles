@@ -1,10 +1,10 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- keymap
-require('setting.keymap')
 -- template setup
 require('setting.template')
+
+require('setting.keymap')
 -- remap for colemak Users
 require('colemak')
 
@@ -33,11 +33,13 @@ require('lazy').setup({
     require 'plugins.telescope',
     require 'plugins.treesitter',
     require 'plugins.noice',
+    require 'plugins.snack',
     require 'plugins.harpoon',
-    require 'plugins.comment',
     require 'plugins.fileExplore',
     require 'plugins.undo',
     require 'plugins.fileNavigator',
     require 'plugins.git',
     require 'plugins.copilot',
 })
+
+vim.cmd.colorscheme 'catppuccin'
