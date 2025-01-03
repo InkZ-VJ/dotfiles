@@ -13,13 +13,13 @@ function gol {
 
 function gff {
     echo "Running: grep find fmt.Print"
-    grep -r "fmt\.P" *
-    grep -r "log\.P" *
+    rg "fmt\.P"
+    rg "log\.P"
 }
 
 function gfe {
     echo "Running: grep find errors.New"
-    grep -r "errors\.New" *
+    rg "errors\.New"
 }
 
 function csp {
