@@ -25,53 +25,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    -- theme setup
-    require 'lazy.theme.theme',
-    require 'lazy.dashboard.hyper',
-    -- auto format
-    require 'lazy.autoformat.format',
-    require 'lazy.autoformat.prettier',
-    -- lsp config
-    require 'lazy.lsp.mason',
-    require 'lazy.lsp.null_ls',
-    require 'lazy.lsp.go',
-    -- status line
-    require 'lazy.statusbar',
-    -- auto complete
-    require 'lazy.autocomplete.completion',
-    -- Telescope
-    require 'lazy.telescope.telescope',
-    -- treesitter
-    require 'lazy.treesitter.treesitter',
-    -- cmdline
-    require 'lazy.cmdline.cmdline',
-    -- harpoon2
-    require 'lazy.harpoon.harpoon',
-    -- comment
-    require 'lazy.comment.comment',
-    require 'lazy.fileExplore.nvimtree',
-    require 'lazy.undotree.undotree',
-    require 'lazy.fileNavigator',
-    -- require 'lazy.template.indent',
-    require 'lazy.git',
-    require 'lazy.copilot.copilot',
+    require 'plugins.theme',
+    require 'plugins.autoformat',
+    require 'plugins.lsp',
+    require 'plugins.mini',
+    require 'plugins.autocomplete',
+    require 'plugins.telescope',
+    require 'plugins.treesitter',
+    require 'plugins.noice',
+    require 'plugins.harpoon',
+    require 'plugins.comment',
+    require 'plugins.fileExplore',
+    require 'plugins.undo',
+    require 'plugins.fileNavigator',
+    require 'plugins.git',
+    require 'plugins.copilot',
 })
-
--- [[Setting Option]]
-
-require('setting.diagnostic')
-require('setting.telescope')
-require('setting.treesitter')
-require('setting.lsp')
-require('setting.cmp')
-require('setting.harpoon')
-require('setting.cmdline')
-require("setting.theme")
-require("setting.nvimtree")
-require("setting.go")
-require("setting.flash")
-require("setting.oil")
-require("setting.prettier")
-require("setting.aerial")
-
-vim.cmd [[colorscheme catppuccin]]
