@@ -12,6 +12,8 @@ local mini = {
             require('mini.icons').setup {}
             require('mini.pairs').setup {}
             require('mini.comment').setup {}
+            require('mini.bracketed').setup {}
+            require('mini.surround').setup {}
             local hipatterns = require('mini.hipatterns')
             hipatterns.setup({
                 highlighters = {

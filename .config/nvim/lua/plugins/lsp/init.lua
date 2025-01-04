@@ -5,8 +5,6 @@ local lsp = {
             "ray-x/guihua.lua",
             "neovim/nvim-lspconfig",
             "nvim-treesitter/nvim-treesitter",
-            "rcarriga/nvim-dap-ui",
-            "theHamsta/nvim-dap-virtual-text",
         },
         config = function()
             require("plugins.lsp.config.go")

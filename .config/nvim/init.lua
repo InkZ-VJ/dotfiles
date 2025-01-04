@@ -34,12 +34,12 @@ require('lazy').setup({
     require 'plugins.treesitter',
     require 'plugins.noice',
     require 'plugins.snack',
-    require 'plugins.harpoon',
     require 'plugins.fileExplore',
     require 'plugins.undo',
     require 'plugins.fileNavigator',
     require 'plugins.git',
     require 'plugins.copilot',
+    require 'plugins.debug',
 })
 
 vim.cmd.colorscheme 'catppuccin'

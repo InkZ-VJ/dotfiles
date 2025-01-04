@@ -45,6 +45,7 @@ require("catppuccin").setup({
         copilot_vim = true,
         noice = true,
         aerial = true,
+        dap = true,
         telescope = {
             enabled = true,
             style = "nvchad"
