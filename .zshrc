@@ -58,4 +58,5 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 
 autoload -U +X bashcompinit && bashcompinit
 
-fastfetch
+colorscript -e square
+colorscript -e fade
