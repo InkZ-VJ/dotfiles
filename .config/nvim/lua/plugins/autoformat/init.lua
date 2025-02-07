@@ -39,6 +39,7 @@ local formatter = {
 				}
 			end,
 			formatters_by_ft = {
+				sh = { "shfmt" },
 				lua = { "stylua" },
 				sql = { "pg_format" },
 				go = { "goimports", "gofumpt" },

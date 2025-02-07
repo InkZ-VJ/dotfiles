@@ -28,10 +28,10 @@ function csp {
 }
 
 function gpp {
-    got && echo "\n" && 
-        gol && echo "\n" && 
-        gff && echo "\n" && 
-        gfe && echo "\n" && 
+    got && echo "\n" &&
+        gol && echo "\n" &&
+        gff && echo "\n" &&
+        gfe && echo "\n" &&
         csp
 }
 

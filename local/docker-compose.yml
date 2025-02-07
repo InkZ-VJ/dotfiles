@@ -1,0 +1,78 @@
+# version: "3.8"
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    restart: always
+    command: ["--replSet", "rs0", "--bind_ip_all", "--port", "27017"]
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - 27017:27017
+    healthcheck:
+      test: >
+        echo "try { rs.status() } catch (err) { 
+        rs.initiate({_id: 'rs0', members: [{_id: 0, host: 'localhost:27017'}]}) 
+        }" | mongosh --port 27017 --quiet
+      interval: 5s
+      timeout: 30s
+      start_period: 0s
+      retries: 30
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    restart: always
+    ports:
+      - 6379:6379
+    command: ["redis-server", "--appendonly", "yes"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 10s
+      retries: 5
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: localuser
+      POSTGRES_PASSWORD: localpassword
+      POSTGRES_DB: localdb
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U localuser -d localdb"]
+      interval: 5s
+      timeout: 10s
+      retries: 5
+
+  nginx-proxy-manager:
+    image: "jc21/nginx-proxy-manager:latest"
+    container_name: nginx-proxy-manager
+    restart: unless-stopped
+    network_mode: host
+    ports:
+      - "80:80" # Public HTTP Port
+      - "443:443" # Public HTTPS Port
+      - "81:81" # Admin Web Port
+    environment:
+      DB_POSTGRES_HOST: "0.0.0.0"
+      DB_POSTGRES_PORT: "5432"
+      DB_POSTGRES_USER: "localuser"
+      DB_POSTGRES_PASSWORD: "localpassword"
+      DB_POSTGRES_NAME: "npm"
+    volumes:
+      - npm-data:/data
+      - npm-letsencrypt:/etc/letsencrypt
+    depends_on:
+      - postgres
+
+volumes:
+  postgres-data:
+  mongo-data:
+  npm-data:
+  npm-letsencrypt:
