@@ -12,7 +12,7 @@ function gol {
 }
 
 function gff {
-    echo "Running: grep find fmt.Print"
+    echo "Running: grep find Printing"
     rg "fmt\.P"
     rg "log\.P"
 }
@@ -34,7 +34,6 @@ function gpp {
         gfe && echo "\n" && 
         csp
 }
-
 
 function gmk {
     mockery --dir ./internal/core/ports --output ./internal/core/ports/mocks/ --all
