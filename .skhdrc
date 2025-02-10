@@ -72,3 +72,10 @@ shift + alt - 7 : yabai -m window --space 7;
 ctrl + alt - q : brew services stop yabai
 ctrl + alt - s : brew services start yabai
 ctrl + alt - r : brew services restart yabai
+
+hyper - k : osascript -e 'tell application "Kitty" to activate'
+hyper - f : osascript -e 'tell application "Firefox" to activate'
+hyper - m : osascript -e 'tell application "Mongo Compass" to activate'
+hyper - r : osascript -e 'tell application "RedisInsight" to activate'
+hyper - d : osascript -e 'tell application "Discord" to activate'
+hyper - s : osascript -e 'tell application "Spotify" to activate'

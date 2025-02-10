@@ -1,8 +1,8 @@
 # Ensure Homebrew's binary path is included in PATH
 export PATH="/opt/homebrew/bin:$PATH"
 
-if [ -f ~/.zshrc_secret ]; then
-    source ~/.zshrc_secret
+if [ -f $HOME/.zshrc_secret ]; then
+    source $HOME/.zshrc_secret
 fi
 
 # Aliases
@@ -44,9 +44,9 @@ _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
 
-source ~/fzf-git.sh/fzf-git.sh
+source $HOME/fzf-git.sh/fzf-git.sh
 
-for script in ~/scripts/*.sh; do
+for script in $HOME/scripts/*.sh; do
     if [ -f "$script" ]; then
         source "$script"
     fi
