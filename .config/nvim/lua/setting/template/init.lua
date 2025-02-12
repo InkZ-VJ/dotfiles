@@ -6,7 +6,7 @@ vim.opt.relativenumber = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.termguicolors = true
-vim.opt.scrolloff = 13
+vim.opt.scrolloff = 30
 
 vim.opt.spell = true
 vim.opt.spelllang = "en_us"

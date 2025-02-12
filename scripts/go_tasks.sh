@@ -13,18 +13,18 @@ function gol {
 
 function gff {
     echo "Running: grep find Printing"
-    rg "fmt\.P" || true
-    rg "log\.P" || true
+    rg "fmt\.P"
+    rg "log\.P"
 }
 
 function gfe {
     echo "Running: grep find errors.New"
-    rg "errors\.New" || true
+    rg "errors\.New"
 }
 
 function gov() {
     echo "Running: vulnerability checker"
-    govulncheck ./... || true
+    govulncheck ./...
 }
 
 function csp {
@@ -34,12 +34,17 @@ function csp {
 
 function gpp {
     echo "Running: Goalng Pre Push"
-    got && echo "\n" &&
-        gol && echo "\n" &&
-        gff && echo "\n" &&
-        gfe && echo "\n" &&
-        gov && echo "\n" &&
-        csp
+    got
+    echo "\n"
+    gol
+    echo "\n"
+    gff
+    echo "\n"
+    gfe
+    echo "\n"
+    gov
+    echo "\n"
+    csp
 }
 
 function gmk {
