@@ -41,5 +41,5 @@ require("lazy").setup({
 	require("plugins.debug"),
 })
 
-vim.cmd.colorscheme("catppuccin")
--- vim.cmd.colorscheme("rose-pine")
+-- vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("rose-pine")

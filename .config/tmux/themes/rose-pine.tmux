@@ -1,35 +1,7 @@
-unbind p
-bind p source-file ~/.tmux.conf
-
-set -g prefix C-s
-
-set -g mouse on
-
-bind-key h select-pane -L
-bind-key n select-pane -D
-bind-key e select-pane -U
-bind-key i select-pane -R
-
-bind -n C-H resize-pane -L 2
-bind -n C-I resize-pane -R 2
-bind -n C-E resize-pane -U 2
-bind -n C-N resize-pane -D 2
-
-# set -g default-terminal "$TERM"
-set-option -g status-position top
-set -ag terminal-overrides ",$TERM:Tc"
-set -g pane-active-border-style bg=color0
-set -g pane-border-style bg=color0
-set-window-option -g window-active-style fg=terminal,bg=terminal
-set-window-option -g window-style fg=terminal,bg=terminal
-# set -a terminal-overrides ",xterm-256color:RGB"
-
-# List of plugins
-set -g @plugin 'tmux-plugins/tpm'
-set -g @plugin 'tmux-plugins/tmux-sensible'
-
 set -g @plugin 'rose-pine/tmux'
-set -g @rose_pine_variant 'moon' # Options are 'main', 'moon' or 'dawn'
+
+set -g @rose_pine_variant 'moon'
+
 set -g @rose_pine_host 'on' # Enables hostname in the status bar
 set -g @rose_pine_date_time '' # It accepts the date UNIX command format (man date for info)
 set -g @rose_pine_user 'on' # Turn on the username component in the statusbar
@@ -73,7 +45,3 @@ set -g @rose_pine_status_left_prepend_section '#{tmux_mode_indicator}'
 set -g @rose_pine_status_left_append_section 'It works'
 set -g @rose_pine_status_right_prepend_section 'with normal text'
 set -g @rose_pine_status_right_append_section 'too'
-
-# Other examples:
-
-run '~/.tmux/plugins/tpm/tpm'
