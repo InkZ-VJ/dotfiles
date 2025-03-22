@@ -29,6 +29,10 @@ for script in $HOME/scripts/*.sh; do
     fi
 done
 
+if [[ -n $GHOSTTY_RESOURCES_DIR ]]; then
+  source "$GHOSTTY_RESOURCES_DIR"/shell-integration/zsh/ghostty-integration
+fi
+
 eval "$(zoxide init --cmd cd zsh)"
 
 export PATH="$PATH:$(go env GOPATH)/bin"

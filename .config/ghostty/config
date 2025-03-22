@@ -1,0 +1,8 @@
+theme = rose-pine-moon
+shell-integration = zsh
+font-size = 13
+font-family = JetBrainsMono NFM
+background-blur-radius = 20
+background-opacity = 0.9
+mouse-hide-while-typing = true
+window-decoration = true
