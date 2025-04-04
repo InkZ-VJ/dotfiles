@@ -1,0 +1,22 @@
+nvim .
+$env.config.buffer_editor = "nvim"
+ls
+curl -sS https://starship.rs/install.sh | sh
+brew install starship
+mkdir ($nu.data-dir | path join "vendor/autoload")<\n>starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+ls
+vim .
+nvim .
+gst
+ll
+ls
+lt
+lta
+lt
+c
+vim .
+confn
+vim .
+ll
+pwd
+$(pwd)

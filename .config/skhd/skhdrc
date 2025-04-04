@@ -1,0 +1,14 @@
+# Firefox
+alt + f : osascript -e 'tell application "Firefox" to activate'
+# Ghostty
+alt + g : osascript -e 'tell application "Ghostty" to activate'
+# MongoDB Compass
+alt + m : osascript -e 'tell application "MongoDB Compass" to activate'
+# Redis Insight
+alt + r : osascript -e 'tell application "Redis Insight" to activate'
+# Postman
+alt + p : osascript -e 'tell application "Postman" to activate'
+# Discord
+alt + d : osascript -e 'tell application "Discord" to activate'
+# Obsidian
+alt + o : osascript -e 'tell application "Obisidian" to activate'

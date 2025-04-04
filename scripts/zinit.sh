@@ -10,8 +10,6 @@ if [ ! -d "$ZINIT_HOME" ]; then
 fi
 
 
-eval "$(oh-my-posh init zsh --config $HOME/dotfiles/.config/ohmyposh/zen.toml)"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"

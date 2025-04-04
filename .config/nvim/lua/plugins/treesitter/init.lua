@@ -31,6 +31,7 @@ local treesitter = { -- Highlight, edit, and navigate code
 			"sql",
 			"solidity",
 			"nix",
+			"dot",
 		},
 		-- Autoinstall languages that are not installed
 		auto_install = true,

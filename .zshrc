@@ -34,8 +34,12 @@ if [[ -n $GHOSTTY_RESOURCES_DIR ]]; then
 fi
 
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(direnv hook zsh)"
+eval "$(oh-my-posh init zsh --config $HOME/dotfiles/.config/ohmyposh/zen.toml)"
+# eval "$(starship init zsh)"
 
 export PATH="$PATH:$(go env GOPATH)/bin"
+export EDITOR=nvim
 
 autoload -U +X bashcompinit && bashcompinit
 

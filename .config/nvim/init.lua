@@ -3,6 +3,7 @@ vim.g.maplocalleader = " "
 
 -- template setup
 require("setting.template")
+require("setting.filetype")
 
 require("setting.keymap")
 -- remap for colemak Users

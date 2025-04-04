@@ -3,61 +3,23 @@
 local cmp = require("cmp")
 local luasnip = require("luasnip")
 require("luasnip.loaders.from_vscode").lazy_load()
+
 luasnip.config.setup({})
+local s = luasnip.snippet
+local t = luasnip.text_node
+local i = luasnip.insert_node
 
-local lspkind = require("lspkind")
-
--- setup() is also available as an alias
-lspkind.init({
-	-- DEPRECATED (use mode instead): enables text annotations
-	--
-	-- default: true
-	-- with_text = true,
-
-	-- defines how annotations are shown
-	-- default: symbol
-	-- options: 'text', 'text_symbol', 'symbol_text', 'symbol'
-	mode = "symbol_text",
-
-	-- default symbol map
-	-- can be either 'default' (requires nerd-fonts font) or
-	-- 'codicons' for codicon preset (requires vscode-codicons font)
-	--
-	-- default: 'default'
-	preset = "default",
-
-	-- override preset symbols
-	--
-	-- default: {}
-	-- symbol_map = {
-	--     Text = "󰉿(text)",
-	--     Method = "󰆧(method)",
-	--     Function = "󰊕(func)",
-	--     Constructor = "(constructor)",
-	--     Field = "󰜢(field)",
-	--     Variable = "󰀫(variable)",
-	--     Class = "󰠱(class)",
-	--     Interface = "(interface)",
-	--     Module = "(module)",
-	--     Property = "󰜢(property)",
-	--     Unit = "󰑭(unit)",
-	--     Value = "󰎠(value)",
-	--     Enum = "(Enum)",
-	--     Keyword = "󰌋(keyword)",
-	--     Snippet = "(snippet)",
-	--     Color = "󰏘(color)",
-	--     File = "󰈙(file)",
-	--     Reference = "󰈇(ref)",
-	--     Folder = "󰉋(folder)",
-	--     EnumMember = "(enumMember)",
-	--     Constant = "󰏿(constant)",
-	--     Struct = "󰙅(struct)",
-	--     Event = "(event)",
-	--     Operator = "󰆕(operator)",
-	--     TypeParameter = "",
-	-- },
+luasnip.add_snippets("go", {
+	s("jfmt", {
+		-- Variable name (first focus point)
+		t("jsonData, _ := json.MarshalIndent("),
+		i(2, "data"), -- Second focus point
+		t(', "", "\t")'),
+		t({ "", "fmt.Println(string(jsonData))" }),
+	}),
 })
 
+local lspkind = require("lspkind")
 cmp.setup({
 	snippet = {
 		expand = function(args)

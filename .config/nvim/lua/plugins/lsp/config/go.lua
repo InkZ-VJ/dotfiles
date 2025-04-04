@@ -4,7 +4,7 @@ require("go").setup({
 	-- It is import to set ALL values in your own config if set value to true otherwise the plugin may not work
 	go = "go", -- go command, can be go[default] or e.g. go1.18beta1
 	goimports = "goimports", -- goimports command, can be gopls[default] or either goimports or golines if need to split long lines
-	gofmt = "gofumpt", -- gofmt through gopls: alternative is gofumpt, goimports, golines, gofmt, etc
+	gofmt = "gopls", -- gofmt through gopls: alternative is gofumpt, goimports, golines, gofmt, etc
 	fillstruct = "gopls", -- set to fillstruct if gopls fails to fill struct
 	max_line_len = 0, -- max line length in golines format, Target maximum line length for golines
 	tag_transform = false, -- can be transform option("snakecase", "camelcase", etc) check gomodifytags for details and more options
@@ -44,7 +44,7 @@ require("go").setup({
 	-- set to true: use gopls to format
 	-- false if you want to use other formatter tool(e.g. efm, nulls)
 	lsp_inlay_hints = {
-		enable = false,
+		enable = true,
 		-- hint style, set to 'eol' for end-of-line hints, 'inlay' for inline hints
 		-- inlay only available for 0.10.x
 		style = "eol",
@@ -126,5 +126,8 @@ require("go").setup({
 
 vim.keymap.set("n", "<leader>gm", vim.cmd.GoImports)
 vim.keymap.set("n", "<leader>gmt", vim.cmd.GoModTidy)
+vim.keymap.set("n", "<leader>ts", vim.cmd.GoTestSubCase)
+vim.keymap.set("n", "<leader>tf", vim.cmd.GoTestFunc)
+
 vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<ESC>O return err<ESC>")
 vim.keymap.set("n", "<leader>ne", "oif err != nil {<CR>}<ESC>O return nil, err<ESC>")

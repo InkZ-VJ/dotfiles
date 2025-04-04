@@ -10,6 +10,7 @@ vim.opt.scrolloff = 30
 
 vim.opt.spell = true
 vim.opt.spelllang = "en_us"
+vim.opt.spelloptions = "camel"
 
 vim.g.netrw_liststyle = 0
 

@@ -25,11 +25,17 @@ function gfe {
 function gov() {
     echo "Running: vulnerability checker"
     govulncheck ./...
+
+    echo "Running: semgrep"
+    semgrep --config p/ci --json >gl-sast-report.json
 }
 
 function csp {
-    echo "Running: codespell ."
+    echo "Running: codespell"
     codespell .
+
+    echo "\nRunning: typos"
+    typos
 }
 
 function gpp {
