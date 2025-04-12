@@ -40,11 +40,8 @@ require("lazy").setup({
 	require("plugins.git"),
 	require("plugins.copilot"),
 	require("plugins.debug"),
+	require("plugins.statusline"),
 })
 
 -- vim.cmd.colorscheme("catppuccin")
 vim.cmd.colorscheme("rose-pine")
-vim.api.nvim_set_hl(0, "LuasnipChoiceNode", {
-	bg = "#403d52",
-	fg = "#9ccfd8",
-})
