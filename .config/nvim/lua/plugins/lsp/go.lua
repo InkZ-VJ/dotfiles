@@ -94,7 +94,7 @@ require("go").setup({
 	textobjects = true, -- enable default text objects through treesittter-text-objects
 	test_runner = "go", -- one of {`go`,  `dlv`, `ginkgo`, `gotestsum`}
 	verbose_tests = true, -- set to add verbose flag to tests deprecated, see '-v' option
-	run_in_floaterm = false, -- set to true to run in a float window. :GoTermClose closes the floatterm
+	run_in_floaterm = true, -- set to true to run in a float window. :GoTermClose closes the floatterm
 	-- float term recommend if you use gotestsum ginkgo with terminal color
 
 	floaterm = { -- position

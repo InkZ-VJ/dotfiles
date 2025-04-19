@@ -49,9 +49,9 @@ require("rose-pine").setup({
 
 	highlight_groups = {
 		-- Comment = { fg = "foam" },
-		StatusLine = { fg = "love", bg = "love", blend = 15 },
-		VertSplit = { fg = "base", bg = "rose" },
-		Visual = { fg = "base", bg = "iris", inherit = false },
+		-- StatusLine = { fg = "love", bg = "love", blend = 15 },
+		-- VertSplit = { fg = "base", bg = "rose" },
+		-- Visual = { fg = "base", bg = "iris", inherit = false },
 	},
 
 	before_highlight = function(group, highlight, palette)

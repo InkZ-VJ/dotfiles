@@ -1,4 +1,4 @@
-local flash = {
+return {
 	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
@@ -19,18 +19,5 @@ local flash = {
             { "<c-s>", mode = { "c" },           function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
         },
 	},
-	{
-		"stevearc/aerial.nvim",
-		opts = {},
-		-- Optional dependencies
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-			"nvim-tree/nvim-web-devicons",
-		},
-		config = function()
-			require("setting.aerial")
-		end,
-	},
-}
 
-return flash
+}

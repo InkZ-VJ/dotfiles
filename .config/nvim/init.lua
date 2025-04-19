@@ -1,15 +1,10 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- template setup
 require("setting.template")
-require("setting.filetype")
-
+require("setting.colemak")
 require("setting.keymap")
--- remap for colemak Users
-require("colemak")
 
--- Lazy Package Maneger
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -25,21 +20,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	require("plugins.theme"),
-	require("plugins.autoformat"),
+	require("plugins.completion"),
+	require("plugins.fileExplore"),
+	require("plugins.fileNavigate"),
+	require("plugins.formatter"),
+	require("plugins.git"),
 	require("plugins.lsp"),
 	require("plugins.mini"),
-	require("plugins.autocomplete"),
-	require("plugins.telescope"),
-	require("plugins.treesitter"),
 	require("plugins.noice"),
 	require("plugins.snack"),
-	require("plugins.fileExplore"),
-	require("plugins.fileNavigator"),
-	require("plugins.git"),
-	require("plugins.copilot"),
-	require("plugins.debug"),
 	require("plugins.statusline"),
+	require("plugins.telescope"),
+	require("plugins.themes"),
+	require("plugins.treesitter"),
 })
 
 vim.cmd.colorscheme("rose-pine")

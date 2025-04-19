@@ -1,4 +1,4 @@
-local mini = {
+return {
 	{
 		"echasnovski/mini.nvim",
 		version = "*",
@@ -31,4 +31,3 @@ local mini = {
 	},
 }
 
-return mini

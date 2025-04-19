@@ -1,4 +1,4 @@
-local cmd = {
+return {
 	{
 		"folke/noice.nvim",
 		event = "VeryLazy",
@@ -19,5 +19,3 @@ local cmd = {
 		end,
 	},
 }
-
-return cmd
