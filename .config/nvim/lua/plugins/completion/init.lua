@@ -4,6 +4,7 @@ return {
 		version = "1.*",
 		dependencies = {
 			"fang2hou/blink-copilot",
+			"echasnovski/mini.snippets",
 		},
 		opts = {
 			keymap = { preset = "default" },
@@ -14,6 +15,7 @@ return {
 			signature = {
 				enabled = true,
 			},
+			snippets = { preset = "mini_snippets" },
 			sources = {
 				default = { "copilot", "lsp", "path", "snippets", "buffer" },
 				providers = {
