@@ -98,7 +98,7 @@ require("go").setup({
 	-- float term recommend if you use gotestsum ginkgo with terminal color
 
 	floaterm = { -- position
-		posititon = "auto", -- one of {`top`, `bottom`, `left`, `right`, `center`, `auto`}
+		posititon = "right", -- one of {`top`, `bottom`, `left`, `right`, `center`, `auto`}
 		width = 0.45, -- width of float window if not auto
 		height = 0.98, -- height of float window if not auto
 		title_colors = "nord", -- default to nord, one of {'nord', 'tokyo', 'dracula', 'rainbow', 'solarized ', 'monokai'}
