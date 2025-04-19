@@ -13,7 +13,7 @@ luasnip.add_snippets("go", {
 	s("jfmt", {
 		-- Variable name (first focus point)
 		t("jsonData, _ := json.MarshalIndent("),
-		i(2, "data"), -- Second focus point
+		i(1, "data"), -- Second focus point
 		t(', "", "\t")'),
 		t({ "", "fmt.Println(string(jsonData))" }),
 	}),
@@ -61,7 +61,7 @@ cmp.setup({
 	}),
 	sources = {
 		--     -- Copilot Source
-		--     -- { name = "copilot",  group_index = 2 },
+		{ name = "copilot", group_index = 2 },
 		--     -- Other Sources
 		{ name = "nvim_lsp", group_index = 2 },
 		{ name = "path", group_index = 2 },
@@ -73,7 +73,7 @@ cmp.setup({
 			mode = "symbol",
 			max_width = 50,
 			symbol_map = {
-				-- Copilot = "(copilot)",
+				Copilot = "(copilot)",
 				Text = "󰉿(text)",
 				Method = "󰆧(method)",
 				Function = "󰊕(func)",

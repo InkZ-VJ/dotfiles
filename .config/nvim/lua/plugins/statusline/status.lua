@@ -115,13 +115,15 @@ ins_left({
 
 ins_left({
 	"filename",
+	path = 1,
 	cond = conditions.buffer_not_empty,
 	color = { fg = colors.magenta, gui = "bold" },
 })
 
-ins_left({ "location" })
-
-ins_left({ "progress", color = { fg = colors.fg, gui = "bold" } })
+ins_left({
+	"filetype",
+	color = { fg = colors.cyan, gui = "bold" },
+})
 
 ins_left({
 	"diagnostics",

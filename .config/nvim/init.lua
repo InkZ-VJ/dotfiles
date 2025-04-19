@@ -35,7 +35,6 @@ require("lazy").setup({
 	require("plugins.noice"),
 	require("plugins.snack"),
 	require("plugins.fileExplore"),
-	require("plugins.undo"),
 	require("plugins.fileNavigator"),
 	require("plugins.git"),
 	require("plugins.copilot"),
@@ -43,5 +42,4 @@ require("lazy").setup({
 	require("plugins.statusline"),
 })
 
--- vim.cmd.colorscheme("catppuccin")
 vim.cmd.colorscheme("rose-pine")

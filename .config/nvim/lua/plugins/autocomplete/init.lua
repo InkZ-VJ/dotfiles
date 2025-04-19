@@ -24,14 +24,6 @@ local cmp = {
 			require("nvim-autopairs").setup({})
 		end,
 	},
-	-- {
-	--     'windwp/nvim-ts-autotag',
-	--     config = function()
-	--         require("nvim-ts-autotag").setup {
-	--             filetypes = { "html", "xml", "templ" }
-	--         }
-	--     end
-	-- },
 }
 
 return cmp
