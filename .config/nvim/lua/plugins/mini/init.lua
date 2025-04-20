@@ -12,7 +12,6 @@ return {
 			require("mini.icons").setup({})
 			require("mini.pairs").setup({})
 			require("mini.comment").setup({})
-			-- require("mini.bracketed").setup({})
 			require("mini.surround").setup({})
 			local hipatterns = require("mini.hipatterns")
 			hipatterns.setup({
@@ -31,7 +30,7 @@ return {
 			local gen_loader = require("mini.snippets").gen_loader
 			require("mini.snippets").setup({
 				snippets = {
-                    gen_loader.from_file("~/.config/nvim/snippets/global.json"),
+					gen_loader.from_file("~/.config/nvim/snippets/global.json"),
 					gen_loader.from_lang({
 						lang_patterns = {
 							go = { "go/**/*.json", "**/go.json" },

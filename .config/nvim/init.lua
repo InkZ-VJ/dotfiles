@@ -33,6 +33,8 @@ require("lazy").setup({
 	require("plugins.telescope"),
 	require("plugins.themes"),
 	require("plugins.treesitter"),
+	require("plugins.showkey"),
 })
 
-vim.cmd.colorscheme("rose-pine")
+vim.cmd.ShowkeysToggle()
+vim.cmd.colorscheme("tokyonight-moon")
