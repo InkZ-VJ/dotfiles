@@ -77,7 +77,6 @@ ins_left({
 	-- mode component
 	"mode",
 	color = function()
-		-- auto change color according to neovims mode
 		local mode_color = {
 			n = colors.blue,
 			i = colors.orange,
@@ -101,6 +100,7 @@ ins_left({
 			t = colors.red,
 		}
 		return { fg = colors.bg, gui = "bold", bg = mode_color[vim.fn.mode()] }
+		-- return { fg = colors.bg, gui = "bold" }
 	end,
 	padding = { right = 1, left = 1 },
 })
@@ -187,9 +187,9 @@ ins_right({
 	"diff",
 	symbols = { added = " ", modified = "󰝤 ", removed = " " },
 	diff_color = {
-		added = { fg = colors.cyan, gui = "bold" },
-		modified = { fg = colors.blue, gui = "bold" },
-		removed = { fg = colors.red, gui = "bold" },
+		added = {},
+		modified = {},
+		removed = {},
 	},
 	cond = conditions.hide_in_width,
 })

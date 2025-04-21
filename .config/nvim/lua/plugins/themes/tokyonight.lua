@@ -20,11 +20,20 @@ require("tokyonight").setup({
 		lazy = true,
 		snack = true,
 	},
-})
 
-vim.api.nvim_create_autocmd("ColorScheme", {
-	pattern = "*",
-	callback = function()
-		vim.api.nvim_set_hl(0, "SnacksPicker", { bg = "none", nocombine = true })
+	on_highlights = function(highlights, colors)
+		highlights.LineNrBelow = {
+			fg = "#B3C8CF",
+		}
+		highlights.LineNrAbove = {
+			fg = "#B3C8CF",
+		}
+		highlights.WinSeparator = {
+			fg = "#ff966c",
+		}
+		highlights.SnacksPicker = {
+			bg = "none",
+			nocombine = true,
+		}
 	end,
 })
