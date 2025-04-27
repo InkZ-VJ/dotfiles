@@ -1,0 +1,73 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+vim.opt.nu = true
+vim.opt.relativenumber = true
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.termguicolors = true
+vim.opt.scrolloff = 30
+
+vim.opt.spell = true
+vim.opt.spelllang = "en_us"
+vim.opt.spelloptions = "camel"
+
+vim.g.netrw_liststyle = 0
+
+vim.filetype.add({ extension = { templ = "templ" } })
+
+-- Set highlight on search
+vim.o.hlsearch = false
+
+-- Make line numbers default
+vim.wo.number = true
+
+-- Enable mouse mode
+vim.o.mouse = "a"
+
+vim.opt.list = true
+-- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number"
+
+-- Sync clipboard between OS and Neovim.
+--  Remove this option if you want your OS clipboard to remain independent.
+--  See `:help 'clipboard'`
+vim.o.clipboard = "unnamedplus"
+
+-- Enable break indent
+vim.o.breakindent = true
+vim.o.expandtab = true
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+
+vim.diagnostic.config({
+	virtual_text = false,
+})
+
+-- Save undo history
+vim.o.undofile = true
+
+-- Case-insensitive searching UNLESS \C or capital in search
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
+-- Keep signcolumn on by default
+vim.wo.signcolumn = "yes"
+
+-- Decrease update time
+vim.o.updatetime = 250
+vim.o.timeoutlen = 300
+
+-- Set completeopt to have a better completion experience
+vim.o.completeopt = "menuone,noselect"
+
+-- NOTE: You should make sure your terminal supports this
+vim.o.termguicolors = true
+
+-- local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = { Error = "", Warn = "", Info = "", Hint = "" }
+for type, icon in pairs(signs) do
+	local hl = "DiagnosticSign" .. type
+	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end

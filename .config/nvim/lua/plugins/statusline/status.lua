@@ -3,15 +3,15 @@ local lualine = require("lualine")
 local colors = {
 	bg = "#232136",
 	fg = "#bbc2cf",
-	yellow = "#ECBE7B",
-	cyan = "#008080",
+	yellow = "#ffc777",
+	cyan = "#41a6b5",
 	darkblue = "#3e8fb0",
 	green = "#9ccfd8",
-	orange = "#ea9a97",
-	violet = "#a9a1e1",
+	orange = "#ff9e64",
+	violet = "#9d7cd8 ",
 	magenta = "#c4a7e7",
-	blue = "#3e8fb0",
-	red = "#eb6f92",
+	blue = "#7dcfff",
+	red = "#f7768e",
 }
 
 local conditions = {
@@ -75,15 +75,12 @@ end
 
 ins_left({
 	-- mode component
-	function()
-		return "󰉊󰉊󰉊"
-	end,
+	"mode",
 	color = function()
-		-- auto change color according to neovims mode
 		local mode_color = {
-			n = colors.violet,
+			n = colors.blue,
 			i = colors.orange,
-			v = colors.magenta,
+			v = colors.yellow,
 			[""] = colors.blue,
 			V = colors.blue,
 			c = colors.magenta,
@@ -103,6 +100,7 @@ ins_left({
 			t = colors.red,
 		}
 		return { fg = colors.bg, gui = "bold", bg = mode_color[vim.fn.mode()] }
+		-- return { fg = colors.bg, gui = "bold" }
 	end,
 	padding = { right = 1, left = 1 },
 })
@@ -115,13 +113,15 @@ ins_left({
 
 ins_left({
 	"filename",
+	path = 1,
 	cond = conditions.buffer_not_empty,
-	color = { fg = colors.magenta, gui = "bold" },
+	color = { fg = colors.blue, gui = "bold" },
 })
 
-ins_left({ "location" })
-
-ins_left({ "progress", color = { fg = colors.fg, gui = "bold" } })
+ins_left({
+	"filetype",
+	color = { fg = colors.cyan, gui = "bold" },
+})
 
 ins_left({
 	"diagnostics",
@@ -180,16 +180,16 @@ ins_right({
 ins_right({
 	"branch",
 	icon = "",
-	color = { fg = colors.violet, gui = "bold" },
+	color = { fg = colors.magenta, gui = "bold" },
 })
 
 ins_right({
 	"diff",
-	symbols = { added = "󰉊 ", modified = "󱢅 ", removed = " " },
+	symbols = { added = " ", modified = "󰝤 ", removed = " " },
 	diff_color = {
-		added = { fg = colors.green, gui = "bold" },
-		modified = { fg = colors.orange, gui = "bold" },
-		removed = { fg = colors.red, gui = "bold" },
+		added = {},
+		modified = {},
+		removed = {},
 	},
 	cond = conditions.hide_in_width,
 })

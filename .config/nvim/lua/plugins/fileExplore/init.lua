@@ -1,18 +1,8 @@
 local file = {
 	{
-		"nvim-tree/nvim-tree.lua",
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
-		config = function()
-			require("plugins.fileExplore.config.nvim-tree")
-		end,
-		enabled = false,
-	},
-	{
 		"stevearc/oil.nvim",
 		config = function()
-			require("plugins.fileExplore.config.oil")
+			require("plugins.fileExplore.oil")
 		end,
 		enabled = true,
 	},
@@ -21,7 +11,7 @@ local file = {
 		branch = "harpoon2",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
-			require("setting.harpoon")
+			require("plugins.fileExplore.harpoon")
 		end,
 	},
 }
