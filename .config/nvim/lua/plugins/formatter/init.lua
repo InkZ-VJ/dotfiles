@@ -33,7 +33,7 @@ local formatter = {
 				css = { "prettierd" },
 				scss = { "prettierd" },
 				markdown = { "prettierd" },
-                proto = { "buf" },
+				proto = { "buf" },
 			},
 		},
 	},

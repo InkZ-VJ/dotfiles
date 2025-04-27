@@ -26,8 +26,8 @@ function gov() {
     echo "Running: vulnerability checker"
     govulncheck ./...
 
-    echo "Running: semgrep"
-    semgrep --config p/ci --json >gl-sast-report.json
+    # echo "Running: semgrep"
+    # semgrep --config p/ci --json >gl-sast-report.json
 }
 
 function csp {
@@ -54,5 +54,6 @@ function gpp {
 }
 
 function gmk {
+    echo "Running: Goalng Mockery V2"
     mockery --dir ./internal/core/ports --output ./internal/core/ports/mocks/ --all
 }

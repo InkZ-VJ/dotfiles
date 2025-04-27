@@ -26,7 +26,14 @@ return {
 						Snacks.gitbrowse()
 					end,
 				},
-				{ pane = 2, icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
+				{
+					pane = 2,
+					icon = " ",
+					title = "Recent Files",
+					section = "recent_files",
+					indent = 2,
+					padding = 1,
+				},
 				{
 					pane = 2,
 					icon = " ",
@@ -48,10 +55,14 @@ return {
 		input = { enabled = true },
 		notifier = { enabled = false },
 		quickfile = { enabled = true },
-		scroll = { enabled = false },
+		scroll = { enabled = true },
 		statuscolumn = { enabled = true },
 		words = { enabled = true },
-		picker = { enabled = true },
+		picker = {
+			enabled = true,
+			hidden = true,
+			ignored = true,
+		},
 		explorer = { enabled = true },
 		image = {},
 	},
@@ -69,6 +80,13 @@ return {
 				Snacks.picker.buffers()
 			end,
 			desc = "Buffers",
+		},
+		{
+			"<leader>ff",
+			function()
+				Snacks.picker.smart()
+			end,
+			desc = "Smart Find Files",
 		},
 		{
 			"<leader>sf",
@@ -209,6 +227,13 @@ return {
 				Snacks.picker.lsp_workspace_symbols()
 			end,
 			desc = "LSP Workspace Symbols",
+		},
+		{
+			"<leader>uc",
+			function()
+				Snacks.picker.colorschemes()
+			end,
+			desc = "Colorschemes",
 		},
 	},
 }

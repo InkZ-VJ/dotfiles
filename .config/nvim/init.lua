@@ -36,5 +36,5 @@ require("lazy").setup({
 	require("plugins.showkey"),
 })
 
-vim.cmd.ShowkeysToggle()
+-- vim.cmd.ShowkeysToggle()
 vim.cmd.colorscheme("tokyonight-moon")

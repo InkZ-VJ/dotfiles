@@ -1,8 +1,8 @@
-theme = rose-pine-moon
+theme = tokyonight_moon
 shell-integration = zsh
 font-size = 13
 font-family = JetBrainsMono NFM
 background-blur-radius = 0
-background-opacity = 0.8
+background-opacity = 0.85
 mouse-hide-while-typing = true
 window-decoration = true

@@ -20,7 +20,7 @@ local lsp = {
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 
-			{ "j-hui/fidget.nvim"},
+			{ "j-hui/fidget.nvim" },
 			"saghen/blink.cmp",
 		},
 		opts = {
@@ -36,6 +36,9 @@ local lsp = {
 							},
 						},
 					},
+				},
+				gopls = {
+					completeUnimported = false,
 				},
 			},
 		},
