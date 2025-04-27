@@ -1,10 +1,4 @@
-[user]
-    name = Denis Gruzdev
-    email = codingjerk@gmail.com
-    signingkey = E3DFEC736900FDE2
-
 [commit]
-    gpgSign = true
     template = ~/.config/git/template
 
 [core]
@@ -12,11 +6,6 @@
     compression = 9  # trade cpu for network
     fsync = none
     whitespace = error  # threat incorrect whitespace as errors
-
-[advice]  # disable advices
-    addEmptyPathspec = false
-    pushNonFastForward = false
-    statusHints = false
 
 [blame]
     coloring = highlightRecent
@@ -48,7 +37,6 @@
     autoSetupRemote = true  # easier to push new branches
     default = current  # push only current branch by default
     followTags = true  # push also tags
-    gpgSign = false  # my remotes doesn't support sign pushes
 
 [pull]
     rebase = true
@@ -71,7 +59,7 @@
     plain    = blue
 
 [color "diff"]
-    meta       = black bold
+    meta       = yellow bold
     frag       = magenta
     context    = white
     whitespace = yellow reverse
@@ -80,13 +68,5 @@
     diffFilter = diff-so-fancy --patch
     singlekey = true
 
-# Third-party: diff-so-fancy
 [diff-so-fancy]
     markEmptyLines = false
-
-# URL shortcuts
-[url "git@github.com:"]
-    insteadOf = "gh:"
-
-[url "ssh://git@git.qrator.net:2202/radar/"]
-    insteadOf = "radar:"

@@ -1,12 +1,13 @@
 #!/bin/bash
 
 export GIT_EDITOR=nvim
+export PAGER='less --tabs=4 -RF'
 
 # git
 alias gst='git status'
 alias gl='git pull'
 alias gp='git push'
-alias gd='git diff --output-indicator-new=" " --output-indicator-old=" " | bat'
+alias gd='git diff --output-indicator-new=" " --output-indicator-old=" "'
 alias ga='git add'
 alias gap='ga --patch'
 alias gc='git commit -v'
