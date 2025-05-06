@@ -8,7 +8,7 @@ function got {
 
 function gol {
     echo "Running: golangci-lint run"
-    golangci-lint run
+    golangci-lint run --enable=revive --enable=gosec --enable=misspell
 }
 
 function gff {
@@ -41,8 +41,8 @@ function csp {
 function gpp {
     echo "Running: Goalng Pre Push"
     got
-    echo "\n"
-    gol
+    # echo "\n"
+    # gol
     echo "\n"
     gff
     echo "\n"

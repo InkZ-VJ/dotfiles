@@ -11,39 +11,22 @@ local lsp = {
 		end,
 		event = { "CmdlineEnter" },
 		ft = { "go", "gomod" },
-		build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
+		build = ':lua require("go.install").update_all_sync()',
 	},
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			{ "williamboman/mason.nvim", config = true }, -- NOTE: Must be loaded before dependants
+			{ "williamboman/mason.nvim", config = true },
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 
 			{ "j-hui/fidget.nvim" },
 			"saghen/blink.cmp",
 		},
-		opts = {
-			servers = {
-				lua_ls = {
-					settings = {
-						Lua = {
-							completion = {
-								callSnippet = "Replace",
-							},
-							diagnostics = {
-								globals = { "vim" },
-							},
-						},
-					},
-				},
-				gopls = {
-					completeUnimported = false,
-				},
-			},
-		},
+		opts = {},
 		config = function()
 			require("plugins.lsp.mason")
+			require("plugins.lsp.lsp")
 		end,
 	},
 }

@@ -31,6 +31,13 @@ services:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT_INTERNAL://broker:29092,PLAINTEXT_L://localhost:9092,PLAINTEXT_C://broker:9093
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT_INTERNAL:PLAINTEXT,PLAINTEXT_L:PLAINTEXT,PLAINTEXT_C:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT_INTERNAL
+      KAFKA_SASL_ENABLED_MECHANISMS: PLAIN
+      KAFKA_SASL_MECHANISM_INTER_BROKER: PLAINTEXT # Use PLAINTEXT for internal communication
+      KAFKA_JAAS_CONFIG: |
+        org.apache.kafka.common.security.plain.PlainLoginModule required
+        username="myuser"
+        password="mypassword"
+        user_myuser="mypassword";
   kafka-ui:
     image: provectuslabs/kafka-ui
     container_name: kafka-ui
@@ -45,3 +52,7 @@ services:
       - KAFKA_CLUSTERS_0_NAME=broker
       - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=broker:9093
       - KAFKA_CLUSTERS_0_ZOOKEEPER=zookeeper:2181
+      - KAFKA_CLUSTERS_0_SECURITYPROTOCOL=SASL_PLAINTEXT
+      - KAFKA_CLUSTERS_0_SASLMECHANISM=PLAIN
+      - KAFKA_CLUSTERS_0_SASL_USERNAME=myuser
+      - KAFKA_CLUSTERS_0_SASL_PASSWORD=mypassword
