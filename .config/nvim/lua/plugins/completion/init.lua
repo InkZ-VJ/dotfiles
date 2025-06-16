@@ -34,8 +34,8 @@ return {
 	},
 	{
 		"github/copilot.vim",
-		-- cmd = "Copilot",
-		-- event = "BufWinEnter",
+		cmd = "Copilot",
+		event = "BufWinEnter",
 		-- init = function()
 		-- 	vim.g.copilot_no_maps = true
 		-- end,

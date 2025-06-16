@@ -1,5 +1,6 @@
 # font_family      JetBrainsMono Nerd Font Mono
-font_size 14.0
+font_family      Monaspace Radon
+font_size 13.0
 
 # font_family      Dank Mono Italic
 # font_size 17.0
@@ -33,7 +34,7 @@ cursor #E9B1CD
 mouse_hide_wait 2.0
 
 # BEGIN_KITTY_FONTS
-font_family      family="Monaspace Radon Var"
+# font_family      family="JetBrains Mono"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto

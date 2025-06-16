@@ -2,6 +2,7 @@ theme = tokyonight_moon
 shell-integration = zsh
 font-size = 13
 font-family = JetBrainsMono NFM
+font-family = Monaspace Radon
 background-blur-radius = 20
 background-opacity = 0.85
 mouse-hide-while-typing = true

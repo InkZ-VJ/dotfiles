@@ -13,9 +13,11 @@
 
 # Dependency directories (remove the comment below to include it)
 vendor/
+migrate/
 
 .DS_Store
 
+*.csv
 *.env
 *.envrc
 

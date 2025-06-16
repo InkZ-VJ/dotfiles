@@ -1,0 +1,25 @@
+# version: "3.8"
+services:
+  nginx-proxy-manager:
+    image: "jc21/nginx-proxy-manager:latest"
+    container_name: nginx-proxy-manager
+    restart: unless-stopped
+    network_mode: host
+    ports:
+      - "80:80" # Public HTTP Port
+      - "443:443" # Public HTTPS Port
+      - "81:81" # Admin Web Port
+    environment:
+      DB_POSTGRES_HOST: "0.0.0.0"
+      DB_POSTGRES_PORT: "5432"
+      DB_POSTGRES_USER: "localuser"
+      DB_POSTGRES_PASSWORD: "localpassword"
+      DB_POSTGRES_NAME: "npm"
+    volumes:
+      - npm-data:/data
+      - npm-letsencrypt:/etc/letsencrypt
+    depends_on:
+      - postgres
+volumes:
+  npm-data:
+  npm-letsencrypt:

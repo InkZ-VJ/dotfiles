@@ -8,7 +8,7 @@ require("go").setup({
 	fillstruct = "gopls", -- set to fillstruct if gopls fails to fill struct
 	max_line_len = 0, -- max line length in golines format, Target maximum line length for golines
 	tag_transform = false, -- can be transform option("snakecase", "camelcase", etc) check gomodifytags for details and more options
-	tag_options = "json=omitempty", -- sets options sent to gomodifytags, i.e., json=omitempty
+	tag_options = "bson=omitempty", -- sets options sent to gomodifytags, i.e., json=omitempty
 	gotests_template = "", -- sets gotests -template parameter (check gotests for details)
 	gotests_template_dir = "", -- sets gotests -template_dir parameter (check gotests for details)
 	comment_placeholder = "󰟓 ", -- comment_placeholder your cool placeholder e.g. 󰟓       
