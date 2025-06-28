@@ -94,7 +94,7 @@ require("go").setup({
 	textobjects = true, -- enable default text objects through treesittter-text-objects
 	test_runner = "go", -- one of {`go`,  `dlv`, `ginkgo`, `gotestsum`}
 	verbose_tests = true, -- set to add verbose flag to tests deprecated, see '-v' option
-	run_in_floaterm = false, -- set to true to run in a float window. :GoTermClose closes the floatterm
+	run_in_floaterm = true, -- set to true to run in a float window. :GoTermClose closes the floatterm
 	-- float term recommend if you use gotestsum ginkgo with terminal color
 
 	floaterm = { -- position
@@ -106,7 +106,7 @@ require("go").setup({
 		-- e.g {'#D8DEE9', '#5E81AC', '#88C0D0', '#EBCB8B', '#A3BE8C', '#B48EAD'}
 	},
 	trouble = true, -- true: use trouble to open quickfix
-	test_efm = false, -- errorfomat for quickfix, default mix mode, set to true will be efm only
+	test_efm = true, -- errorfomat for quickfix, default mix mode, set to true will be efm only
 	luasnip = false, -- enable included luasnip snippets. you can also disable while add lua/snips folder to luasnip load
 	--  Do not enable this if you already added the path, that will duplicate the entries
 	on_jobstart = function(cmd)

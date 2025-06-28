@@ -20,7 +20,7 @@ alias confn='cd ~/dotfiles/.config/nvim'
 
 # useful command
 alias cover='firefox $(pwd)/cover.html'
-alias air='air -c $HOME/.air.toml'
+alias airc='air -c $HOME/.air.toml'
 alias dev='nodemon --exec go run --tags dynamic $(shell pwd)/cmd/main.go --signal SIGTERM'
 
 for script in $HOME/scripts/*.sh; do
