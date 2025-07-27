@@ -22,11 +22,11 @@ require("lspconfig").golangci_lint_ls.setup({
 		command = { "golangci-lint", "run", "--output.json.path=stdout", "--show-stats=false" },
 	},
 	root_markers = {
-		"~/.config/nvim/lua/plugins/lsp/go/golangci.yml",
 		".golangci.yml",
 		".golangci.yaml",
 		".golangci.toml",
 		".golangci.json",
+		"~/.config/nvim/lua/plugins/lsp/go/golangci.yml",
 		"go.work",
 		"go.mod",
 		".git",

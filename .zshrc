@@ -42,6 +42,3 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 export EDITOR=nvim
 
 autoload -U +X bashcompinit && bashcompinit
-
-colorscript -e square
-colorscript -e fade

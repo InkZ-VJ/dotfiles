@@ -44,7 +44,7 @@ require("go").setup({
 	-- set to true: use gopls to format
 	-- false if you want to use other formatter tool(e.g. efm, nulls)
 	lsp_inlay_hints = {
-		enable = true,
+		enable = false,
 		-- hint style, set to 'eol' for end-of-line hints, 'inlay' for inline hints
 		-- inlay only available for 0.10.x
 		style = "eol",
@@ -92,14 +92,14 @@ require("go").setup({
 	dap_retries = 20, -- see dap option max_retries
 	build_tags = "tag1,tag2", -- set default build tags
 	textobjects = true, -- enable default text objects through treesittter-text-objects
-	test_runner = "go", -- one of {`go`,  `dlv`, `ginkgo`, `gotestsum`}
+	test_runner = "gotestsum", -- one of {`go`,  `dlv`, `ginkgo`, `gotestsum`}
 	verbose_tests = true, -- set to add verbose flag to tests deprecated, see '-v' option
 	run_in_floaterm = true, -- set to true to run in a float window. :GoTermClose closes the floatterm
 	-- float term recommend if you use gotestsum ginkgo with terminal color
 
 	floaterm = { -- position
 		posititon = "right", -- one of {`top`, `bottom`, `left`, `right`, `center`, `auto`}
-		width = 0.45, -- width of float window if not auto
+		width = 0.3, -- width of float window if not auto
 		height = 0.98, -- height of float window if not auto
 		title_colors = "nord", -- default to nord, one of {'nord', 'tokyo', 'dracula', 'rainbow', 'solarized ', 'monokai'}
 		-- can also set to a list of colors to define colors to choose from

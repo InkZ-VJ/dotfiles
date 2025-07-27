@@ -290,7 +290,12 @@
   },
   "marshallPrinter": {
     "prefix": "jfmt",
-    "body": "jsonData, _ := json.MarshalIndent(${1:var},\"\",\"\\t\")\nfmt.Println(string(jsonData))\n$0",
-    "description": "marshallPrinter"
+    "body": "jsonData, _ := json.MarshalIndent(${1:var}, \"\", \"  \")\nfmt.Println(string(jsonData))\n$0",
+    "description": "JSON Extended JSON Marshall Printer"
+  },
+  "marshallBsonPrinter": {
+    "prefix": "bfmt",
+    "body": "bsonData, _ := bson.MarshalExtJSONIndent(${1:var}, false, true, \"\", \"  \")\nfmt.Println(string(bsonData))\n$0",
+    "description": "BSON Extended JSON Marshall Printer"
   }
 }

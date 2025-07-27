@@ -6,7 +6,7 @@
     compression = 9  # trade cpu for network
     fsync = none
     whitespace = error  # threat incorrect whitespace as errors
-    excludesfile = ~/.config/git/ignore
+	excludesfile = /home/inkz/.config/git/ignore
 
 [blame]
     coloring = highlightRecent
@@ -71,3 +71,7 @@
 
 [diff-so-fancy]
     markEmptyLines = false
+[user]
+	email = vatcharapong.j@7solutions.co.th
+	name = vatcharapong.j
+	password = Mnxrl9kjf3
