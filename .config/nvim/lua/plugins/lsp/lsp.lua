@@ -33,3 +33,11 @@ require("lspconfig").golangci_lint_ls.setup({
 	},
 	settings = {},
 })
+
+require("lspconfig").zls.setup({
+  cmd = { "zls" },
+  filetypes = { "zig" ,"zir"},
+  root_dir = require("lspconfig").util.root_pattern("build.zig", ".git"),
+  single_file_support = true,
+  settings = {},
+})

@@ -34,6 +34,7 @@ local formatter = {
 				scss = { "prettierd" },
 				markdown = { "prettierd" },
 				proto = { "buf" },
+                zig = {"zigfmt"},
 			},
 		},
 	},

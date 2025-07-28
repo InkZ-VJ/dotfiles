@@ -28,13 +28,6 @@ local git = {
             virtual_text_column = 1, -- virtual text start column, check Start virtual text at column section for more options
         },
     },
-    {
-        "refractalize/oil-git-status.nvim",
-        dependencies = {
-            "stevearc/oil.nvim",
-        },
-        config = true,
-    },
 }
 
 return git
