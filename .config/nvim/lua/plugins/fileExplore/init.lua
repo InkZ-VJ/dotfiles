@@ -1,12 +1,18 @@
 local file = {
 	{
 		"stevearc/oil.nvim",
-		dependencies = {"refractalize/oil-git-status.nvim" },
 		config = function()
 			require("plugins.fileExplore.oil")
 		end,
 		enabled = true
 	},
+    {
+          "refractalize/oil-git-status.nvim",
+          dependencies = {
+            "stevearc/oil.nvim",
+          },
+          config = true,
+    },
 	{
 		"ThePrimeagen/harpoon",
 		branch = "harpoon2",
